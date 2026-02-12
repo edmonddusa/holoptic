@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holoptic | Contact</title>
+  <meta name="description" content="Contact Holoptic for local AI solutions, secure Linux setup, and on prem deployment." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img src="assets/blogo.png" alt="Holoptic logo" />
+
+      </div>
+
+      <nav>
+        <a data-nav href="index.html" data-i18n="navHome"></a>
+        <a data-nav href="pricing.html" data-i18n="navPricing"></a>
+        <a data-nav href="contact.html" data-i18n="navContact"></a>
+        <a class="btn primary" href="contact.html" data-i18n="navQuote"></a>
+
+        <div class="lang">
+          <label for="langSelect" data-i18n="langLabel"></label>
+          <select id="langSelect">
+            <option value="en">EN</option>
+            <option value="hu">HU</option>
+            <option value="sv">SV</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="section" id="top">
+      <h1 class="headline" style="font-size:44px;" data-i18n="contactTitle"></h1>
+      <p class="section-lead" data-i18n="contactLead"></p>
+
+      <div class="card">
+        <form id="leadForm" action="https://formspree.io/f/maqdeebp" method="POST" autocomplete="off">
+          <div>
+            <input name="name" required data-i18n-placeholder="formName" />
+          </div>
+          <div>
+            <input name="company" data-i18n-placeholder="formCompany" />
+          </div>
+          <div>
+            <input name="email" type="email" required data-i18n-placeholder="formEmail" />
+          </div>
+          <div>
+            <input name="phone" data-i18n-placeholder="formPhone" />
+          </div>
+          <div class="full">
+            <textarea name="message" data-i18n-placeholder="formMsg"></textarea>
+          </div>
+          <div class="full form-actions">
+            <button class="btn primary" type="submit" data-i18n="formSend"></button>
+            <a
+                id="emailDirectBtn"
+                class="btn"
+                href="mailto:eddie@holoptic.org?subject=Local%20AI%20Inquiry"
+                data-i18n="formEmailDirect"
+                style="display:none;"
+            ></a>
+          </div>
+        </form>
+
+        <div id="formStatus" class="card" style="display:none; margin-top:12px;">
+          <h4 data-i18n="formThanksTitle"></h4>
+          <p data-i18n="formThanksBody"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> <span data-i18n="footerLeft"></span></div>
+        <div><a href="#top" style="text-decoration:none;" data-i18n="backToTop"></a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/i18n.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

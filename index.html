@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holoptic | Local AI</title>
+  <meta name="description" content="Private, offline AI for your business. Plug and play local LLM systems configured for your network." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="home">
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <img src="assets/blogo.png" alt="Holoptic logo" />
+
+    </div>
+
+      <nav>
+        <a data-nav href="index.html" data-i18n="navHome"></a>
+        <a data-nav href="pricing.html" data-i18n="navPricing"></a>
+        <a data-nav href="contact.html" data-i18n="navContact"></a>
+        <a class="btn primary" href="contact.html" data-i18n="navQuote"></a>
+
+        <div class="lang" aria-label="Language switcher">
+          <label for="langSelect" data-i18n="langLabel"></label>
+          <select id="langSelect">
+            <option value="en">EN</option>
+            <option value="hu">HU</option>
+            <option value="sv">SV</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <header class="container hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <div class="pill-row">
+          <div class="pill" data-i18n="heroPill1"></div>
+          <div class="pill" data-i18n="heroPill2"></div>
+          <div class="pill" data-i18n="heroPill3"></div>
+          <div class="pill" data-i18n="heroPill4"></div>
+        </div>
+
+        <h1 class="headline" data-i18n="homeTitle"></h1>
+        <p class="subhead" data-i18n="homeLead"></p>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin: 22px 0 6px;">
+          <a class="btn primary" href="contact.html" data-i18n="homeCta1"></a>
+          <a class="btn" href="pricing.html" data-i18n="homeCta2"></a>
+        </div>
+        <p class="subhead" style="font-size:12px; margin-top: 10px;" data-i18n="homeNote"></p>
+      </div>
+
+      <aside class="card" aria-label="Hardware package">
+        <h3 data-i18n="homeCardTitle"></h3>
+        <ul class="spec">
+          <li data-i18n="homeSpec1"></li>
+          <li data-i18n="homeSpec2"></li>
+          <li data-i18n="homeSpec3"></li>
+          <li data-i18n="homeSpec4"></li>
+        </ul>
+
+        <div class="price">
+          <strong>~€3,000</strong>
+          <span data-i18n="homePriceHw"></span>
+        </div>
+        <div class="price">
+          <strong>+€600</strong>
+          <span data-i18n="homePriceSetup"></span>
+        </div>
+        <p class="subhead" style="font-size:12px; margin-top: 10px;" data-i18n="homeCardFoot"></p>
+      </aside>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" id="why">
+      <h2 class="section-title" data-i18n="whyTitle"></h2>
+      <p class="section-lead" data-i18n="whyLead"></p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4 data-i18n="whyC1Title"></h4>
+          <p data-i18n="whyC1Body"></p>
+        </div>
+        <div class="card">
+          <h4 data-i18n="whyC2Title"></h4>
+          <p data-i18n="whyC2Body"></p>
+        </div>
+        <div class="card">
+          <h4 data-i18n="whyC3Title"></h4>
+          <p data-i18n="whyC3Body"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="models">
+      <h2 class="section-title" data-i18n="modelsTitle"></h2>
+      <p class="section-lead" data-i18n="modelsLead"></p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4 data-i18n="modelsC1Title"></h4>
+          <p data-i18n="modelsC1Body"></p>
+          <ul class="list">
+            <li>DeepSeek Coder (family)</li>
+            <li>Qwen2.5 Coder (family)</li>
+            <li>Llama code tuned variants</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-i18n="modelsC2Title"></h4>
+          <p data-i18n="modelsC2Body"></p>
+          <ul class="list">
+            <li>Llama 3 (family)</li>
+            <li>Qwen2.5 (family)</li>
+            <li>Mistral or Mixtral (family)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4 data-i18n="modelsC3Title"></h4>
+          <p data-i18n="modelsC3Body"></p>
+          <ul class="list">
+            <li>Local embeddings</li>
+            <li>Vector search</li>
+            <li>Role based access</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="subhead" style="font-size:12px; margin-top: 12px;" data-i18n="modelsNote"></p>
+    </section>
+
+    <footer>
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> <span data-i18n="footerLeft"></span></div>
+        <div><a href="#top" style="text-decoration:none;" data-i18n="backToTop"></a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/i18n.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

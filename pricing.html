@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holoptic | Pricing</title>
+  <meta name="description" content="Transparent pricing for local AI hardware and secure Linux setup." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img src="assets/blogo.png" alt="Holoptic logo" />
+
+      </div>
+
+      <nav>
+        <a data-nav href="index.html" data-i18n="navHome"></a>
+        <a data-nav href="pricing.html" data-i18n="navPricing"></a>
+        <a data-nav href="contact.html" data-i18n="navContact"></a>
+        <a class="btn primary" href="contact.html" data-i18n="navQuote"></a>
+
+        <div class="lang">
+          <label for="langSelect" data-i18n="langLabel"></label>
+          <select id="langSelect">
+            <option value="en">EN</option>
+            <option value="hu">HU</option>
+            <option value="sv">SV</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="section" id="top">
+      <h1 class="headline" style="font-size:44px;" data-i18n="pricingTitle"></h1>
+      <p class="section-lead" data-i18n="pricingLead"></p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 data-i18n="pricingP1Title"></h3>
+          <p data-i18n="pricingP1Lead"></p>
+          <ul class="list">
+            <li data-i18n="pricingP1L1"></li>
+            <li data-i18n="pricingP1L2"></li>
+            <li data-i18n="pricingP1L3"></li>
+            <li data-i18n="pricingP1L4"></li>
+            <li data-i18n="pricingP1L5"></li>
+          </ul>
+          <div style="margin-top:14px;">
+            <a class="btn primary" href="contact.html" data-i18n="navQuote"></a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="pricingP2Title"></h3>
+          <p data-i18n="pricingP2Lead"></p>
+          <ul class="list">
+            <li data-i18n="pricingP2L1"></li>
+            <li data-i18n="pricingP2L2"></li>
+            <li data-i18n="pricingP2L3"></li>
+            <li data-i18n="pricingP2L4"></li>
+          </ul>
+          <div style="margin-top:14px;">
+            <a class="btn" href="index.html#models" data-i18n="modelsTitle"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+        <div>© <span id="year"></span> <span data-i18n="footerLeft"></span></div>
+        <div><a href="#top" style="text-decoration:none;" data-i18n="backToTop"></a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/i18n.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
