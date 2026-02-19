@@ -51,14 +51,12 @@ export default function Contact() {
             </div>
             <div className="full form-actions">
               <button className="btn primary" type="submit">{t('formSend')}</button>
-              <a
-                className="btn"
-                href="mailto:eddie@holoptic.org?subject=Local%20AI%20Inquiry"
-              >
-                {t('formEmailDirect')}
-              </a>
             </div>
           </form>
+
+          <p style={{ marginTop: '16px', fontSize: '14px', color: 'var(--muted)' }}>
+            {t('formEmailDirect')} <a href="mailto:eddie@holoptic.org" style={{ color: 'var(--text)', textDecoration: 'underline' }}>eddie@holoptic.org</a>
+          </p>
 
           {submitted && (
             <div className="card" style={{ marginTop: '12px' }}>

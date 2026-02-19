@@ -83,7 +83,7 @@ export const translations = {
     formMsg:
       "What do you want to achieve with local AI? Example: internal document assistant, coding help, on prem knowledge base",
     formSend: "Send inquiry",
-    formEmailDirect: "Email directly",
+    formEmailDirect: "Or if you prefer, send an email to",
     formNotice:
       "This demo shows a success message locally. Hook it up to your backend to receive leads.",
     formThanksTitle: "Thanks",
@@ -177,7 +177,7 @@ export const translations = {
     formMsg:
       "Mit szeretnél elérni a helyi AI-val? Példa: belső dokumentum asszisztens, kódolás, helyi tudásbázis",
     formSend: "Küldés",
-    formEmailDirect: "Email küldése",
+    formEmailDirect: "Vagy ha szeretnéd, küldj emailt ide:",
     formNotice:
       "Ez a demo csak helyben jelzi a sikert. Backendre kötve érkeznek be a leadek.",
     formThanksTitle: "Köszönöm",
@@ -271,7 +271,7 @@ export const translations = {
     formMsg:
       "Vad vill du uppnå med lokal AI? Exempel: dokumentassistent, kodhjälp, lokal kunskapsbas",
     formSend: "Skicka förfrågan",
-    formEmailDirect: "Maila direkt",
+    formEmailDirect: "Eller om du föredrar, skicka ett mail till",
     formNotice:
       "Den här demon visar bara ett lokalt OK. Koppla till backend för att ta emot leads.",
     formThanksTitle: "Tack",
