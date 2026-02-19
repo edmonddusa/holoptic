@@ -29,25 +29,43 @@ export default function Home() {
           </div>
 
           <aside className="card" aria-label="Hardware package">
-            <h3>{t('homeCardTitle')}</h3>
-            <ul className="spec">
-              <li>{t('homeSpec1')}</li>
-              <li>{t('homeSpec2')}</li>
-              <li>{t('homeSpec3')}</li>
-              <li>{t('homeSpec4')}</li>
-            </ul>
+            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+              <div style={{ flex: 1 }}>
+                <h3>{t('homeCardTitle')}</h3>
+                <ul className="spec">
+                  <li>{t('homeSpec1')}</li>
+                  <li>{t('homeSpec2')}</li>
+                  <li>{t('homeSpec3')}</li>
+                  <li>{t('homeSpec4')}</li>
+                </ul>
 
-            <div className="price">
-              <strong>~€3,000</strong>
-              <span>{t('homePriceHw')}</span>
+                <table style={{ width: '100%', marginTop: '12px', fontSize: '14px' }}>
+                  <tbody>
+                    <tr>
+                      <td style={{ fontWeight: 'bold', fontSize: '20px', paddingRight: '12px', verticalAlign: 'top', whiteSpace: 'nowrap' }}>~€3,000</td>
+                      <td style={{ color: 'var(--muted)', fontSize: '13px', verticalAlign: 'top' }}>{t('homePriceHw')}</td>
+                    </tr>
+                    <tr>
+                      <td style={{ fontWeight: 'bold', fontSize: '20px', paddingRight: '12px', paddingTop: '8px', verticalAlign: 'top', whiteSpace: 'nowrap' }}>+€600</td>
+                      <td style={{ color: 'var(--muted)', fontSize: '13px', paddingTop: '8px', verticalAlign: 'top' }}>{t('homePriceSetup')}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p className="subhead" style={{ fontSize: '12px', marginTop: '10px' }}>
+                  {t('homeCardFoot')}
+                </p>
+              </div>
+              <img 
+                src="/assets/hardware.webp" 
+                alt="Minisforum AI PC" 
+                style={{ 
+                  width: '120px', 
+                  height: 'auto',
+                  objectFit: 'contain',
+                  flexShrink: 0
+                }} 
+              />
             </div>
-            <div className="price">
-              <strong>+€600</strong>
-              <span>{t('homePriceSetup')}</span>
-            </div>
-            <p className="subhead" style={{ fontSize: '12px', marginTop: '10px' }}>
-              {t('homeCardFoot')}
-            </p>
           </aside>
         </div>
       </header>
