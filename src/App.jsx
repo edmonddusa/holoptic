@@ -20,6 +20,15 @@ function PlausibleTracker() {
 }
 
 function App() {
+  useEffect(() => {
+    // Handle redirect from 404.html
+    const redirect = sessionStorage.redirect;
+    if (redirect && redirect !== location.href) {
+      sessionStorage.removeItem('redirect');
+      history.replaceState(null, '', redirect.replace(location.origin, ''));
+    }
+  }, []);
+
   return (
     <I18nProvider>
       <BrowserRouter>
