@@ -3,7 +3,7 @@ import { translations } from '../i18n/translations';
 
 const I18nContext = createContext();
 
-const SUPPORTED = ['en', 'hu', 'sv', 'de', 'fr', 'it'];
+const SUPPORTED = ['en', 'hu', 'sv', 'de', 'fr', 'it', 'es'];
 
 function getBrowserLanguage() {
   // Get browser language (e.g., "en-US" or "en")

@@ -618,5 +618,108 @@ export const translations = {
 
     footerLeft: "Holoptic Kft • Budapest",
     backToTop: "Torna su"
+  },
+  es: {
+    langName: "Español",
+    navHome: "Inicio",
+    navPricing: "Precios",
+    navContact: "Contacto",
+    navQuote: "Solicitar presupuesto",
+    langLabel: "Idioma",
+
+    heroPill1: "Privado • Sin conexión",
+    heroPill2: "Sin costos de API",
+    heroPill3: "Soberanía de datos UE",
+    heroPill4: "Plug and play",
+
+    homeTitle: "IA local que no cuesta una fortuna.",
+    homeLead:
+      "Ejecuta modelos de IA potentes dentro de tu propia red. Mantén los datos sensibles privados, elimina los costos recurrentes de API y entrega valor hoy mismo.",
+    homeCta1: "Hablar con Eddie",
+    homeCta2: "Ver precios",
+    homeNote:
+      "Diseñado para PYMEs, despachos legales y contables, equipos de ingeniería y cualquiera que se preocupe por la privacidad.",
+
+    homeCardTitle: "Configuración de referencia (ejemplo)",
+    homeSpec1: "Ryzen AI Max+ 395 (16C/32T, hasta 5,1 GHz)",
+    homeSpec2: "GPU RDNA 3.5 con memoria unificada",
+    homeSpec3: "128 GB de memoria unificada",
+    homeSpec4: "SSD NVMe de 2 TB",
+    homePriceHw: "hardware (nuevo)",
+    homePriceSetup: "instalación Linux segura y hardening",
+    homeCardFoot: "El precio final depende de la disponibilidad y tus requisitos.",
+
+    whyTitle: "Por qué IA local",
+    whyLead:
+      "La IA local se trata de control. Tú decides a dónde van los datos, qué se registra, quién puede acceder al sistema y cuánto cuesta con el tiempo.",
+    whyC1Title: "Privacidad por defecto",
+    whyC1Body:
+      "Mantén documentos de clientes, contratos y datos internos dentro de tu propia red. No se requieren servicios externos.",
+    whyC2Title: "Costo predecible",
+    whyC2Body:
+      "Paga una vez por hardware y configuración. Evita facturas recurrentes de API, límites de tokens o sorpresas de precios.",
+    whyC3Title: "Funciona sin conexión",
+    whyC3Body:
+      "Ideal para entornos restringidos e industrias reguladas. Tu IA sigue funcionando incluso sin Internet.",
+
+    setupTitle: "Configuración simple",
+    setupLead:
+      "Conecta la máquina a tu red local con un cable ethernet. Cualquiera en tu red puede acceder a través de un navegador web. El sistema está aislado de Internet por defecto y puede conectarse opcionalmente mediante VPN.",
+    setupC1Title: "Conecta a tu red",
+    setupC1Body: "Conexión por cable ethernet. No se necesita configuración compleja.",
+    setupC2Title: "Acceso desde cualquier dispositivo",
+    setupC2Body: "Cualquiera en tu red local puede usarlo a través de su navegador.",
+    setupC3Title: "Aislado de Internet",
+    setupC3Body: "No accesible desde Internet. VPN saliente opcional para actualizaciones.",
+
+    modelsTitle: "Qué puede ejecutar (ejemplos)",
+    modelsLead:
+      "Con 128 GB de memoria unificada puedes ejecutar modelos serios localmente, típicamente en forma cuantizada, incluyendo potentes asistentes de codificación y generales.",
+    modelsC1Title: "Asistentes de codificación",
+    modelsC1Body: "Ideal para revisión de código, refactorización y herramientas internas.",
+    modelsC2Title: "Asistentes generales",
+    modelsC2Body: "Bueno para bases de conocimiento internas, resúmenes y escritura.",
+    modelsC3Title: "RAG privado",
+    modelsC3Body: "Chatea con tus propios documentos manteniendo todo en las instalaciones.",
+    modelsNote:
+      "La idoneidad exacta depende del nivel de cuantización, tamaño del contexto y carga de trabajo. Recomiendo una configuración estable para tu caso de uso.",
+
+    pricingTitle: "Precios",
+    pricingLead:
+      "Simple y transparente: hardware a precio de costo, más instalación y hardening. Opciones adicionales disponibles.",
+    pricingP1Title: "€600 instalación y seguridad",
+    pricingP1Lead:
+      "Incluye una instalación Linux endurecida y un stack de IA local plug and play.",
+    pricingP1L1: "Instalación Linux segura y hardening",
+    pricingP1L2: "Configuración lista para red",
+    pricingP1L3: "Runtime de IA local + carga de modelos",
+    pricingP1L4: "Monitoreo básico + configuraciones predeterminadas sensatas",
+    pricingP1L5: "Documentación de entrega",
+    pricingP2Title: "Aproximadamente €3.000 de hardware",
+    pricingP2Lead:
+      "Ejemplo: Ryzen AI Max+ 395, RDNA 3.5, 128 GB memoria unificada, 2 TB NVMe.",
+    pricingP2L1: "Componentes nuevos",
+    pricingP2L2: "Adaptados para cargas de trabajo de IA local",
+    pricingP2L3: "Silencioso y adecuado para oficina",
+    pricingP2L4: "Las especificaciones finales dependen del stock",
+
+    contactTitle: "Contacto",
+    contactLead:
+      "Dime qué quieres ejecutar y si necesitas operación completamente sin conexión. Propondré una solución segura y práctica.",
+    formName: "Tu nombre",
+    formCompany: "Empresa",
+    formEmail: "Email",
+    formPhone: "Teléfono (opcional)",
+    formMsg:
+      "¿Qué quieres lograr con IA local? Ejemplo: asistente de documentos internos, ayuda de codificación, base de conocimiento en las instalaciones",
+    formSend: "Enviar consulta",
+    formEmailDirect: "O si prefieres, envía un email a",
+    formNotice:
+      "Esta demo solo muestra un mensaje de éxito local. Conéctala a tu backend para recibir leads.",
+    formThanksTitle: "Gracias",
+    formThanksBody: "Te responderé lo antes posible.",
+
+    footerLeft: "Holoptic Kft • Budapest",
+    backToTop: "Volver arriba"
   }
 };

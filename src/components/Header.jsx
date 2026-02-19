@@ -17,6 +17,7 @@ export default function Header() {
     { code: 'de', label: 'DE' },
     { code: 'fr', label: 'FR' },
     { code: 'it', label: 'IT' },
+    { code: 'es', label: 'ES' },
   ];
 
   useEffect(() => {
