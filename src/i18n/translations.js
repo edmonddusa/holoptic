@@ -372,7 +372,191 @@ export const translations = {
 
     footerLeft: "Holoptic Kft • Budapest",
     backToTop: "Nach oben"
+  },
+  fr: {
+    langName: "Français",
+    navHome: "Accueil",
+    navPricing: "Tarifs",
+    navContact: "Contact",
+    navQuote: "Demander un devis",
+    langLabel: "Langue",
+
+    heroPill1: "Privé • Hors ligne",
+    heroPill2: "Pas de frais d'API",
+    heroPill3: "Souveraineté des données UE",
+    heroPill4: "Plug and play",
+
+    homeTitle: "L'IA locale ne coûte pas une fortune.",
+    homeLead:
+      "Exécutez des modèles d'IA puissants dans votre propre réseau. Gardez les données sensibles privées, éliminez les coûts d'API récurrents et livrez de la valeur dès aujourd'hui.",
+    homeCta1: "Parler à Eddie",
+    homeCta2: "Voir les tarifs",
+    homeNote:
+      "Conçu pour les PME, les cabinets juridiques et comptables, les équipes d'ingénieurs et tous ceux qui se soucient de la confidentialité.",
+
+    homeCardTitle: "Configuration de référence (exemple)",
+    homeSpec1: "Ryzen AI Max+ 395 (16C/32T, jusqu'à 5,1 GHz)",
+    homeSpec2: "GPU RDNA 3.5 avec mémoire unifiée",
+    homeSpec3: "128 Go de mémoire unifiée",
+    homeSpec4: "SSD NVMe 2 To",
+    homePriceHw: "matériel (neuf)",
+    homePriceSetup: "installation Linux sécurisée et durcissement",
+    homeCardFoot: "Le prix final dépend de la disponibilité et de vos besoins.",
+
+    whyTitle: "Pourquoi l'IA locale",
+    whyLead:
+      "L'IA locale, c'est le contrôle. Vous décidez où vont les données, ce qui est enregistré, qui peut accéder au système et ce que cela coûte dans le temps.",
+    whyC1Title: "Confidentialité par défaut",
+    whyC1Body:
+      "Gardez les documents clients, les contrats et les données internes dans votre propre réseau. Aucun service externe requis.",
+    whyC2Title: "Coût prévisible",
+    whyC2Body:
+      "Payez une fois pour le matériel et la configuration. Évitez les factures d'API récurrentes, les limites de jetons ou les surprises de prix.",
+    whyC3Title: "Fonctionne hors ligne",
+    whyC3Body:
+      "Idéal pour les environnements restreints et les industries réglementées. Votre IA continue de fonctionner même sans Internet.",
+
+    modelsTitle: "Ce qu'il peut exécuter (exemples)",
+    modelsLead:
+      "Avec 128 Go de mémoire unifiée, vous pouvez exécuter des modèles sérieux localement, généralement sous forme quantifiée, y compris de puissants assistants de codage et généraux.",
+    modelsC1Title: "Assistants de codage",
+    modelsC1Body: "Idéal pour la revue de code, le refactoring et les outils internes.",
+    modelsC2Title: "Assistants généraux",
+    modelsC2Body: "Bon pour les bases de connaissances internes, la synthèse et l'écriture.",
+    modelsC3Title: "RAG privé",
+    modelsC3Body: "Discutez avec vos propres documents tout en gardant tout sur site.",
+    modelsNote:
+      "L'adéquation exacte dépend du niveau de quantification, de la taille du contexte et de la charge de travail. Je recommande une configuration stable pour votre cas d'usage.",
+
+    pricingTitle: "Tarifs",
+    pricingLead:
+      "Simple et transparent : matériel au prix coûtant, plus installation et durcissement. Options supplémentaires disponibles.",
+    pricingP1Title: "600 € installation et sécurité",
+    pricingP1Lead:
+      "Comprend une installation Linux durcie et une pile d'IA locale plug and play.",
+    pricingP1L1: "Installation Linux sécurisée et durcissement",
+    pricingP1L2: "Configuration prête pour le réseau",
+    pricingP1L3: "Runtime d'IA local + chargement de modèles",
+    pricingP1L4: "Surveillance de base + paramètres par défaut sensés",
+    pricingP1L5: "Documentation de transfert",
+    pricingP2Title: "Environ 3 000 € de matériel",
+    pricingP2Lead:
+      "Exemple : Ryzen AI Max+ 395, RDNA 3.5, 128 Go de mémoire unifiée, 2 To NVMe.",
+    pricingP2L1: "Composants neufs",
+    pricingP2L2: "Adaptés aux charges de travail d'IA locale",
+    pricingP2L3: "Silencieux et adapté au bureau",
+    pricingP2L4: "Les spécifications finales dépendent du stock",
+
+    contactTitle: "Contact",
+    contactLead:
+      "Dites-moi ce que vous voulez exécuter et si vous avez besoin d'un fonctionnement entièrement hors ligne. Je proposerai une solution sécurisée et pratique.",
+    formName: "Votre nom",
+    formCompany: "Entreprise",
+    formEmail: "E-mail",
+    formPhone: "Téléphone (optionnel)",
+    formMsg:
+      "Que voulez-vous accomplir avec l'IA locale ? Exemple : assistant de documents internes, aide au codage, base de connaissances sur site",
+    formSend: "Envoyer la demande",
+    formEmailDirect: "Ou si vous préférez, envoyez un e-mail à",
+    formNotice:
+      "Cette démo affiche uniquement un message de succès local. Connectez-la à votre backend pour recevoir des prospects.",
+    formThanksTitle: "Merci",
+    formThanksBody: "Je vous répondrai dès que possible.",
+
+    footerLeft: "Holoptic Kft • Budapest",
+    backToTop: "Retour en haut"
+  },
+  it: {
+    langName: "Italiano",
+    navHome: "Home",
+    navPricing: "Prezzi",
+    navContact: "Contatto",
+    navQuote: "Richiedi preventivo",
+    langLabel: "Lingua",
+
+    heroPill1: "Privato • Offline",
+    heroPill2: "Nessun costo API",
+    heroPill3: "Sovranità dei dati UE",
+    heroPill4: "Plug and play",
+
+    homeTitle: "L'IA locale non deve costare una fortuna.",
+    homeLead:
+      "Esegui modelli di IA potenti all'interno della tua rete. Mantieni i dati sensibili privati, elimina i costi API ricorrenti e fornisci valore oggi stesso.",
+    homeCta1: "Parla con Eddie",
+    homeCta2: "Vedi i prezzi",
+    homeNote:
+      "Progettato per PMI, studi legali e contabili, team di ingegneri e chiunque si preoccupi della privacy.",
+
+    homeCardTitle: "Configurazione di riferimento (esempio)",
+    homeSpec1: "Ryzen AI Max+ 395 (16C/32T, fino a 5,1 GHz)",
+    homeSpec2: "GPU RDNA 3.5 con memoria unificata",
+    homeSpec3: "128 GB di memoria unificata",
+    homeSpec4: "SSD NVMe da 2 TB",
+    homePriceHw: "hardware (nuovo)",
+    homePriceSetup: "installazione Linux sicura e hardening",
+    homeCardFoot: "Il prezzo finale dipende dalla disponibilità e dalle tue esigenze.",
+
+    whyTitle: "Perché l'IA locale",
+    whyLead:
+      "L'IA locale riguarda il controllo. Tu decidi dove vanno i dati, cosa viene registrato, chi può accedere al sistema e quanto costa nel tempo.",
+    whyC1Title: "Privacy per impostazione predefinita",
+    whyC1Body:
+      "Mantieni documenti dei clienti, contratti e dati interni all'interno della tua rete. Nessun servizio esterno richiesto.",
+    whyC2Title: "Costo prevedibile",
+    whyC2Body:
+      "Paga una volta per hardware e configurazione. Evita fatture API ricorrenti, limiti di token o sorprese sui prezzi.",
+    whyC3Title: "Funziona offline",
+    whyC3Body:
+      "Ideale per ambienti ristretti e settori regolamentati. La tua IA continua a funzionare anche senza Internet.",
+
+    modelsTitle: "Cosa può eseguire (esempi)",
+    modelsLead:
+      "Con 128 GB di memoria unificata puoi eseguire modelli seri localmente, tipicamente in forma quantizzata, inclusi potenti assistenti di codifica e generali.",
+    modelsC1Title: "Assistenti di codifica",
+    modelsC1Body: "Ottimo per revisione del codice, refactoring e strumenti interni.",
+    modelsC2Title: "Assistenti generali",
+    modelsC2Body: "Buono per basi di conoscenza interne, sintesi e scrittura.",
+    modelsC3Title: "RAG privato",
+    modelsC3Body: "Chatta con i tuoi documenti mantenendo tutto on-premise.",
+    modelsNote:
+      "L'idoneità esatta dipende dal livello di quantizzazione, dimensione del contesto e carico di lavoro. Raccomando una configurazione stabile per il tuo caso d'uso.",
+
+    pricingTitle: "Prezzi",
+    pricingLead:
+      "Semplice e trasparente: hardware a prezzo di costo, più installazione e hardening. Opzioni aggiuntive disponibili.",
+    pricingP1Title: "€600 installazione e sicurezza",
+    pricingP1Lead:
+      "Include un'installazione Linux hardened e uno stack di IA locale plug and play.",
+    pricingP1L1: "Installazione Linux sicura e hardening",
+    pricingP1L2: "Configurazione pronta per la rete",
+    pricingP1L3: "Runtime IA locale + caricamento modelli",
+    pricingP1L4: "Monitoraggio di base + impostazioni predefinite sensate",
+    pricingP1L5: "Documentazione di consegna",
+    pricingP2Title: "Circa €3.000 di hardware",
+    pricingP2Lead:
+      "Esempio: Ryzen AI Max+ 395, RDNA 3.5, 128 GB memoria unificata, 2 TB NVMe.",
+    pricingP2L1: "Componenti nuovi di zecca",
+    pricingP2L2: "Adattati per carichi di lavoro IA locali",
+    pricingP2L3: "Silenzioso e adatto all'ufficio",
+    pricingP2L4: "Le specifiche finali dipendono dalla disponibilità",
+
+    contactTitle: "Contatto",
+    contactLead:
+      "Dimmi cosa vuoi eseguire e se hai bisogno di un funzionamento completamente offline. Proporrò una soluzione sicura e pratica.",
+    formName: "Il tuo nome",
+    formCompany: "Azienda",
+    formEmail: "Email",
+    formPhone: "Telefono (opzionale)",
+    formMsg:
+      "Cosa vuoi ottenere con l'IA locale? Esempio: assistente documenti interni, aiuto nella codifica, base di conoscenza on-premise",
+    formSend: "Invia richiesta",
+    formEmailDirect: "Oppure, se preferisci, invia un'email a",
+    formNotice:
+      "Questa demo mostra solo un messaggio di successo locale. Collegala al tuo backend per ricevere lead.",
+    formThanksTitle: "Grazie",
+    formThanksBody: "Ti risponderò il prima possibile.",
+
+    footerLeft: "Holoptic Kft • Budapest",
+    backToTop: "Torna su"
   }
 };
-
-  
