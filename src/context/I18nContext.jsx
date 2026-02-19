@@ -5,13 +5,25 @@ const I18nContext = createContext();
 
 const SUPPORTED = ['en', 'hu', 'sv', 'de', 'fr', 'it'];
 
+function getBrowserLanguage() {
+  // Get browser language (e.g., "en-US" or "en")
+  const browserLang = navigator.language || navigator.userLanguage;
+  // Extract just the language code (e.g., "en" from "en-US")
+  const langCode = browserLang.split('-')[0].toLowerCase();
+  // Return if supported, otherwise null
+  return SUPPORTED.includes(langCode) ? langCode : null;
+}
+
 function getLangFromStorage() {
   const lang = (localStorage.getItem('lang') || '').toLowerCase();
-  return SUPPORTED.includes(lang) ? lang : 'en';
+  return SUPPORTED.includes(lang) ? lang : null;
 }
 
 export function I18nProvider({ children }) {
-  const [lang, setLangState] = useState(getLangFromStorage);
+  const [lang, setLangState] = useState(() => {
+    // Priority: localStorage > browser language > default to English
+    return getLangFromStorage() || getBrowserLanguage() || 'en';
+  });
 
   useEffect(() => {
     document.documentElement.lang = lang;
