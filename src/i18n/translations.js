@@ -54,6 +54,16 @@ export const translations = {
     modelsNote:
       "Exact fit depends on quantization level, context size, and workload. I recommend a stable configuration for your use case.",
 
+    setupTitle: "Simple setup",
+    setupLead:
+      "Connect the machine to your local network with an ethernet cable. Anyone on your network can access it through a web browser. The system is isolated from the internet by default and can optionally connect out via VPN.",
+    setupC1Title: "Plug into your network",
+    setupC1Body: "Connect via ethernet cable. No complex configuration needed.",
+    setupC2Title: "Access from any device",
+    setupC2Body: "Anyone on your local network can use it through their browser.",
+    setupC3Title: "Internet isolated",
+    setupC3Body: "Not accessible from the internet. Optional outbound VPN for updates.",
+
     pricingTitle: "Pricing",
     pricingLead:
       "Simple and transparent: hardware at cost, plus setup and hardening. Optional add ons available.",
@@ -147,6 +157,16 @@ export const translations = {
     modelsC3Body: "Csevegés a saját dokumentumaiddal, helyben.",
     modelsNote:
       "A pontos kapacitás a kvantálástól, kontextusmérettől és terheléstől függ. Stabil, bevált konfigurációt javaslok.",
+
+    setupTitle: "Egyszerű telepítés",
+    setupLead:
+      "Csatlakoztasd a gépet a helyi hálózatodhoz ethernet kábellel. Bárki a hálózatodon elérheti böngészőből. A rendszer alapból el van szigetelve az internettől, opcionálisan VPN-en keresztül csatlakozhat kifelé.",
+    setupC1Title: "Csatlakoztasd a hálózathoz",
+    setupC1Body: "Ethernet kábellel. Nincs bonyolult beállítás.",
+    setupC2Title: "Elérhető bármely eszközről",
+    setupC2Body: "Bárki a helyi hálózaton használhatja böngészőből.",
+    setupC3Title: "Internet elszigetelt",
+    setupC3Body: "Nem elérhető az internetről. Opcionális kimenő VPN frissítésekhez.",
 
     pricingTitle: "Árazás",
     pricingLead:
@@ -242,6 +262,16 @@ export const translations = {
     modelsNote:
       "Exakt kapacitet beror på kvantisering, kontextstorlek och arbetslast. Jag rekommenderar en stabil konfiguration.",
 
+    setupTitle: "Enkel installation",
+    setupLead:
+      "Anslut maskinen till ditt lokala nätverk med en ethernet-kabel. Alla på ditt nätverk kan komma åt den via webbläsare. Systemet är isolerat från internet som standard och kan valfritt ansluta ut via VPN.",
+    setupC1Title: "Anslut till ditt nätverk",
+    setupC1Body: "Anslut via ethernet-kabel. Ingen komplex konfiguration behövs.",
+    setupC2Title: "Åtkomst från vilken enhet som helst",
+    setupC2Body: "Alla på ditt lokala nätverk kan använda den via sin webbläsare.",
+    setupC3Title: "Internet-isolerad",
+    setupC3Body: "Inte tillgänglig från internet. Valfri utgående VPN för uppdateringar.",
+
     pricingTitle: "Priser",
     pricingLead:
       "Enkelt och transparent: hårdvara till självkostnad plus installation och hardening. Tillval finns.",
@@ -334,6 +364,16 @@ export const translations = {
     modelsC3Body: "Chatten Sie mit Ihren eigenen Dokumenten, während alles vor Ort bleibt.",
     modelsNote:
       "Die genaue Eignung hängt von Quantisierungsstufe, Kontextgröße und Arbeitslast ab. Ich empfehle eine stabile Konfiguration für Ihren Anwendungsfall.",
+
+    setupTitle: "Einfache Einrichtung",
+    setupLead:
+      "Verbinden Sie die Maschine mit einem Ethernet-Kabel mit Ihrem lokalen Netzwerk. Jeder in Ihrem Netzwerk kann über einen Webbrowser darauf zugreifen. Das System ist standardmäßig vom Internet isoliert und kann optional über VPN nach außen verbinden.",
+    setupC1Title: "An Ihr Netzwerk anschließen",
+    setupC1Body: "Verbindung über Ethernet-Kabel. Keine komplexe Konfiguration erforderlich.",
+    setupC2Title: "Zugriff von jedem Gerät",
+    setupC2Body: "Jeder in Ihrem lokalen Netzwerk kann es über seinen Browser nutzen.",
+    setupC3Title: "Internet-isoliert",
+    setupC3Body: "Nicht aus dem Internet erreichbar. Optionales ausgehendes VPN für Updates.",
 
     pricingTitle: "Preise",
     pricingLead:
@@ -428,6 +468,16 @@ export const translations = {
     modelsNote:
       "L'adéquation exacte dépend du niveau de quantification, de la taille du contexte et de la charge de travail. Je recommande une configuration stable pour votre cas d'usage.",
 
+    setupTitle: "Configuration simple",
+    setupLead:
+      "Connectez la machine à votre réseau local avec un câble ethernet. Toute personne sur votre réseau peut y accéder via un navigateur web. Le système est isolé d'Internet par défaut et peut éventuellement se connecter via VPN.",
+    setupC1Title: "Branchez sur votre réseau",
+    setupC1Body: "Connexion par câble ethernet. Aucune configuration complexe nécessaire.",
+    setupC2Title: "Accès depuis n'importe quel appareil",
+    setupC2Body: "Toute personne sur votre réseau local peut l'utiliser via son navigateur.",
+    setupC3Title: "Isolé d'Internet",
+    setupC3Body: "Non accessible depuis Internet. VPN sortant optionnel pour les mises à jour.",
+
     pricingTitle: "Tarifs",
     pricingLead:
       "Simple et transparent : matériel au prix coûtant, plus installation et durcissement. Options supplémentaires disponibles.",
@@ -520,6 +570,16 @@ export const translations = {
     modelsC3Body: "Chatta con i tuoi documenti mantenendo tutto on-premise.",
     modelsNote:
       "L'idoneità esatta dipende dal livello di quantizzazione, dimensione del contesto e carico di lavoro. Raccomando una configurazione stabile per il tuo caso d'uso.",
+
+    setupTitle: "Configurazione semplice",
+    setupLead:
+      "Collega la macchina alla tua rete locale con un cavo ethernet. Chiunque sulla tua rete può accedervi tramite browser web. Il sistema è isolato da Internet per impostazione predefinita e può opzionalmente connettersi in uscita tramite VPN.",
+    setupC1Title: "Collega alla tua rete",
+    setupC1Body: "Connessione tramite cavo ethernet. Nessuna configurazione complessa necessaria.",
+    setupC2Title: "Accesso da qualsiasi dispositivo",
+    setupC2Body: "Chiunque sulla tua rete locale può usarlo tramite il proprio browser.",
+    setupC3Title: "Isolato da Internet",
+    setupC3Body: "Non accessibile da Internet. VPN in uscita opzionale per aggiornamenti.",
 
     pricingTitle: "Prezzi",
     pricingLead:

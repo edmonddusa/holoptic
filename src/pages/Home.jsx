@@ -90,6 +90,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section" id="setup">
+        <h2 className="section-title">{t('setupTitle')}</h2>
+        <p className="section-lead">{t('setupLead')}</p>
+
+        <div className="grid-3">
+          <div className="card">
+            <h4>{t('setupC1Title')}</h4>
+            <p>{t('setupC1Body')}</p>
+          </div>
+          <div className="card">
+            <h4>{t('setupC2Title')}</h4>
+            <p>{t('setupC2Body')}</p>
+          </div>
+          <div className="card">
+            <h4>{t('setupC3Title')}</h4>
+            <p>{t('setupC3Body')}</p>
+          </div>
+        </div>
+      </section>
+
       <section className="section" id="models">
         <h2 className="section-title">{t('modelsTitle')}</h2>
         <p className="section-lead">{t('modelsLead')}</p>
