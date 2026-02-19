@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useI18n } from '../context/I18nContext';
 
 export default function Pricing() {
@@ -21,7 +22,7 @@ export default function Pricing() {
               <li>{t('pricingP1L5')}</li>
             </ul>
             <div style={{ marginTop: '14px' }}>
-              <a className="btn primary" href="/contact">{t('navQuote')}</a>
+              <Link to="/contact" className="btn primary">{t('navQuote')}</Link>
             </div>
           </div>
 

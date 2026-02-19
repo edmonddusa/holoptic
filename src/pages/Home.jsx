@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useI18n } from '../context/I18nContext';
 
 export default function Home() {
@@ -19,8 +20,8 @@ export default function Home() {
             <p className="subhead">{t('homeLead')}</p>
 
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', margin: '22px 0 6px' }}>
-              <a className="btn primary" href="/contact">{t('homeCta1')}</a>
-              <a className="btn" href="/pricing">{t('homeCta2')}</a>
+              <Link to="/contact" className="btn primary">{t('homeCta1')}</Link>
+              <Link to="/pricing" className="btn">{t('homeCta2')}</Link>
             </div>
             <p className="subhead" style={{ fontSize: '12px', marginTop: '10px' }}>
               {t('homeNote')}
