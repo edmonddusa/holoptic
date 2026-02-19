@@ -3,7 +3,7 @@ import { translations } from '../i18n/translations';
 
 const I18nContext = createContext();
 
-const SUPPORTED = ['en', 'hu', 'sv'];
+const SUPPORTED = ['en', 'hu', 'sv', 'de'];
 
 function getLangFromStorage() {
   const lang = (localStorage.getItem('lang') || '').toLowerCase();

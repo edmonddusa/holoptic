@@ -34,6 +34,7 @@ export default function Header() {
               <option value="en">EN</option>
               <option value="hu">HU</option>
               <option value="sv">SV</option>
+              <option value="de">DE</option>
             </select>
           </div>
         </nav>

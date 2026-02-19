@@ -279,5 +279,100 @@ export const translations = {
 
     footerLeft: "Holoptic Kft • Budapest",
     backToTop: "Till toppen"
+  },
+  de: {
+    langName: "Deutsch",
+    navHome: "Startseite",
+    navPricing: "Preise",
+    navContact: "Kontakt",
+    navQuote: "Angebot anfordern",
+    langLabel: "Sprache",
+
+    heroPill1: "Privat • Offline",
+    heroPill2: "Keine API-Kosten",
+    heroPill3: "EU-Datensouveränität",
+    heroPill4: "Plug and Play",
+
+    homeTitle: "Lokale KI muss kein Vermögen kosten.",
+    homeLead:
+      "Führen Sie leistungsstarke KI-Modelle in Ihrem eigenen Netzwerk aus. Halten Sie sensible Daten privat, eliminieren Sie wiederkehrende API-Kosten und liefern Sie heute Mehrwert.",
+    homeCta1: "Mit Eddie sprechen",
+    homeCta2: "Preise ansehen",
+    homeNote:
+      "Entwickelt für KMUs, Anwalts- und Buchhaltungskanzleien, Ingenieurteams und alle, denen Datenschutz wichtig ist.",
+
+    homeCardTitle: "Referenzsystem (Beispiel)",
+    homeSpec1: "Ryzen AI Max+ 395 (16C/32T, bis zu 5,1 GHz)",
+    homeSpec2: "RDNA 3.5 GPU mit Unified Memory",
+    homeSpec3: "128 GB Unified Memory",
+    homeSpec4: "2 TB NVMe SSD",
+    homePriceHw: "Hardware (neu)",
+    homePriceSetup: "sichere Linux-Installation & Härtung",
+    homeCardFoot: "Der endgültige Preis hängt von Verfügbarkeit und Ihren Anforderungen ab.",
+
+    whyTitle: "Warum lokale KI",
+    whyLead:
+      "Bei lokaler KI geht es um Kontrolle. Sie entscheiden, wohin Daten gehen, was protokolliert wird, wer Zugriff auf das System hat und was es langfristig kostet.",
+    whyC1Title: "Datenschutz standardmäßig",
+    whyC1Body:
+      "Halten Sie Kundendokumente, Verträge und interne Daten in Ihrem eigenen Netzwerk. Keine externen Dienste erforderlich.",
+    whyC2Title: "Vorhersehbare Kosten",
+    whyC2Body:
+      "Einmalige Zahlung für Hardware und Einrichtung. Vermeiden Sie wiederkehrende API-Rechnungen, Token-Limits oder Preisüberraschungen.",
+    whyC3Title: "Funktioniert offline",
+    whyC3Body:
+      "Ideal für eingeschränkte Umgebungen und regulierte Branchen. Ihre KI funktioniert auch ohne Internet.",
+
+    modelsTitle: "Was es ausführen kann (Beispiele)",
+    modelsLead:
+      "Mit 128 GB Unified Memory können Sie ernsthafte Modelle lokal ausführen, typischerweise in quantisierter Form, einschließlich starker Coding- und allgemeiner Assistenten.",
+    modelsC1Title: "Coding-Assistenten",
+    modelsC1Body: "Ideal für Code-Review, Refactoring und interne Tools.",
+    modelsC2Title: "Allgemeine Assistenten",
+    modelsC2Body: "Gut für interne Wissensdatenbanken, Zusammenfassungen und Schreiben.",
+    modelsC3Title: "Private RAG",
+    modelsC3Body: "Chatten Sie mit Ihren eigenen Dokumenten, während alles vor Ort bleibt.",
+    modelsNote:
+      "Die genaue Eignung hängt von Quantisierungsstufe, Kontextgröße und Arbeitslast ab. Ich empfehle eine stabile Konfiguration für Ihren Anwendungsfall.",
+
+    pricingTitle: "Preise",
+    pricingLead:
+      "Einfach und transparent: Hardware zum Selbstkostenpreis plus Einrichtung und Härtung. Optionale Zusatzleistungen verfügbar.",
+    pricingP1Title: "€600 Einrichtung & Sicherheit",
+    pricingP1Lead:
+      "Beinhaltet eine gehärtete Linux-Installation und einen Plug-and-Play-lokalen KI-Stack.",
+    pricingP1L1: "Sichere Linux-Installation & Härtung",
+    pricingP1L2: "Netzwerkbereite Konfiguration",
+    pricingP1L3: "Lokale KI-Laufzeitumgebung + Modell-Laden",
+    pricingP1L4: "Basis-Monitoring + sinnvolle Standardeinstellungen",
+    pricingP1L5: "Übergabedokumentation",
+    pricingP2Title: "Ca. €3.000 Hardware",
+    pricingP2Lead:
+      "Beispiel: Ryzen AI Max+ 395, RDNA 3.5, 128 GB Unified Memory, 2 TB NVMe.",
+    pricingP2L1: "Brandneue Komponenten",
+    pricingP2L2: "Abgestimmt auf lokale KI-Workloads",
+    pricingP2L3: "Leise und bürofreundlich",
+    pricingP2L4: "Endgültige Spezifikation hängt vom Lagerbestand ab",
+
+    contactTitle: "Kontakt",
+    contactLead:
+      "Sagen Sie mir, was Sie ausführen möchten und ob Sie vollständig offline arbeiten müssen. Ich schlage eine sichere, praktische Lösung vor.",
+    formName: "Ihr Name",
+    formCompany: "Firma",
+    formEmail: "E-Mail",
+    formPhone: "Telefon (optional)",
+    formMsg:
+      "Was möchten Sie mit lokaler KI erreichen? Beispiel: interner Dokumentenassistent, Coding-Hilfe, lokale Wissensdatenbank",
+    formSend: "Anfrage senden",
+    formEmailDirect: "Oder wenn Sie möchten, senden Sie eine E-Mail an",
+    formNotice:
+      "Diese Demo zeigt nur eine lokale Erfolgsmeldung. Verbinden Sie sie mit Ihrem Backend, um Leads zu erhalten.",
+    formThanksTitle: "Danke",
+    formThanksBody: "Ich melde mich so schnell wie möglich bei Ihnen.",
+
+    footerLeft: "Holoptic Kft • Budapest",
+    backToTop: "Nach oben"
   }
 };
+
+  
