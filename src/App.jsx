@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { I18nProvider } from './context/I18nContext';
 import { useEffect } from 'react';
 import Layout from './components/Layout';
@@ -19,19 +19,27 @@ function PlausibleTracker() {
   return null;
 }
 
-function App() {
+function RedirectHandler() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Handle redirect from 404.html
     const redirect = sessionStorage.redirect;
-    if (redirect && redirect !== location.href) {
+    if (redirect && redirect !== window.location.href) {
       sessionStorage.removeItem('redirect');
-      history.replaceState(null, '', redirect.replace(location.origin, ''));
+      const path = redirect.replace(window.location.origin, '');
+      navigate(path, { replace: true });
     }
-  }, []);
+  }, [navigate]);
 
+  return null;
+}
+
+function App() {
   return (
     <I18nProvider>
       <BrowserRouter>
+        <RedirectHandler />
         <PlausibleTracker />
         <Routes>
           <Route path="/" element={<Layout />}>
