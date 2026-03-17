@@ -6,19 +6,6 @@ import Home from './pages/Home';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 
-function PlausibleTracker() {
-  const location = useLocation();
-
-  useEffect(() => {
-    // Track page view on route change
-    if (window.plausible) {
-      window.plausible('pageview');
-    }
-  }, [location.pathname]);
-
-  return null;
-}
-
 function RedirectHandler() {
   const navigate = useNavigate();
 
@@ -40,7 +27,6 @@ function App() {
     <I18nProvider>
       <BrowserRouter>
         <RedirectHandler />
-        <PlausibleTracker />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
