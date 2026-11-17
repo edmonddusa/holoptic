@@ -48,9 +48,11 @@ export const translations = {
     modelsC1Title: "Coding assistants",
     modelsC1Body: "Great for code review, refactoring, and internal tooling.",
     modelsC2Title: "General assistants",
-    modelsC2Body: "Good for internal knowledge bases, summarization, and writing.",
+    modelsC2Body:
+      "Good for internal knowledge bases, summarization, and writing.",
     modelsC3Title: "Private RAG",
-    modelsC3Body: "Chat with your own documents while keeping everything on prem.",
+    modelsC3Body:
+      "Chat with your own documents while keeping everything on prem.",
     modelsNote:
       "Exact fit depends on quantization level, context size, and workload. I recommend a stable configuration for your use case.",
 
@@ -60,9 +62,11 @@ export const translations = {
     setupC1Title: "Plug into your network",
     setupC1Body: "Connect via ethernet cable. No complex configuration needed.",
     setupC2Title: "Access from any device",
-    setupC2Body: "Anyone on your local network can use it through their browser.",
+    setupC2Body:
+      "Anyone on your local network can use it through their browser.",
     setupC3Title: "Internet isolated",
-    setupC3Body: "Not accessible from the internet. Optional outbound VPN for updates.",
+    setupC3Body:
+      "Not accessible from the internet. Optional outbound VPN for updates.",
 
     pricingTitle: "Pricing",
     pricingLead:
@@ -100,7 +104,7 @@ export const translations = {
     formThanksBody: "I will get back to you as soon as I can.",
 
     footerLeft: "Holoptic Kft • Budapest, HU",
-    backToTop: "Back to top"
+    backToTop: "Back to top",
   },
 
   hu: {
@@ -166,7 +170,8 @@ export const translations = {
     setupC2Title: "Elérhető bármely eszközről",
     setupC2Body: "Bárki a helyi hálózaton használhatja böngészőből.",
     setupC3Title: "Internet elszigetelt",
-    setupC3Body: "Nem elérhető az internetről. Opcionális kimenő VPN frissítésekhez.",
+    setupC3Body:
+      "Nem elérhető az internetről. Opcionális kimenő VPN frissítésekhez.",
 
     pricingTitle: "Árazás",
     pricingLead:
@@ -204,7 +209,7 @@ export const translations = {
     formThanksBody: "Hamarosan válaszolok.",
 
     footerLeft: "Holoptic Kft • Budapest",
-    backToTop: "Vissza a tetejére"
+    backToTop: "Vissza a tetejére",
   },
 
   sv: {
@@ -266,11 +271,14 @@ export const translations = {
     setupLead:
       "Anslut maskinen till ditt lokala nätverk med en ethernet-kabel. Alla på ditt nätverk kan komma åt den via webbläsare. Systemet är isolerat från internet som standard och kan valfritt ansluta ut via VPN.",
     setupC1Title: "Anslut till ditt nätverk",
-    setupC1Body: "Anslut via ethernet-kabel. Ingen komplex konfiguration behövs.",
+    setupC1Body:
+      "Anslut via ethernet-kabel. Ingen komplex konfiguration behövs.",
     setupC2Title: "Åtkomst från vilken enhet som helst",
-    setupC2Body: "Alla på ditt lokala nätverk kan använda den via sin webbläsare.",
+    setupC2Body:
+      "Alla på ditt lokala nätverk kan använda den via sin webbläsare.",
     setupC3Title: "Internet-isolerad",
-    setupC3Body: "Inte tillgänglig från internet. Valfri utgående VPN för uppdateringar.",
+    setupC3Body:
+      "Inte tillgänglig från internet. Valfri utgående VPN för uppdateringar.",
 
     pricingTitle: "Priser",
     pricingLead:
@@ -308,7 +316,7 @@ export const translations = {
     formThanksBody: "Jag återkommer så snart jag kan.",
 
     footerLeft: "Holoptic Kft • Budapest",
-    backToTop: "Till toppen"
+    backToTop: "Till toppen",
   },
   de: {
     langName: "Deutsch",
@@ -338,7 +346,8 @@ export const translations = {
     homeSpec4: "2 TB NVMe SSD",
     homePriceHw: "Hardware (neu)",
     homePriceSetup: "sichere Linux-Installation & Härtung",
-    homeCardFoot: "Der endgültige Preis hängt von Verfügbarkeit und Ihren Anforderungen ab.",
+    homeCardFoot:
+      "Der endgültige Preis hängt von Verfügbarkeit und Ihren Anforderungen ab.",
 
     whyTitle: "Warum lokale KI",
     whyLead:
@@ -359,9 +368,11 @@ export const translations = {
     modelsC1Title: "Coding-Assistenten",
     modelsC1Body: "Ideal für Code-Review, Refactoring und interne Tools.",
     modelsC2Title: "Allgemeine Assistenten",
-    modelsC2Body: "Gut für interne Wissensdatenbanken, Zusammenfassungen und Schreiben.",
+    modelsC2Body:
+      "Gut für interne Wissensdatenbanken, Zusammenfassungen und Schreiben.",
     modelsC3Title: "Private RAG",
-    modelsC3Body: "Chatten Sie mit Ihren eigenen Dokumenten, während alles vor Ort bleibt.",
+    modelsC3Body:
+      "Chatten Sie mit Ihren eigenen Dokumenten, während alles vor Ort bleibt.",
     modelsNote:
       "Die genaue Eignung hängt von Quantisierungsstufe, Kontextgröße und Arbeitslast ab. Ich empfehle eine stabile Konfiguration für Ihren Anwendungsfall.",
 
@@ -369,11 +380,14 @@ export const translations = {
     setupLead:
       "Verbinden Sie die Maschine mit einem Ethernet-Kabel mit Ihrem lokalen Netzwerk. Jeder in Ihrem Netzwerk kann über einen Webbrowser darauf zugreifen. Das System ist standardmäßig vom Internet isoliert und kann optional über VPN nach außen verbinden.",
     setupC1Title: "An Ihr Netzwerk anschließen",
-    setupC1Body: "Verbindung über Ethernet-Kabel. Keine komplexe Konfiguration erforderlich.",
+    setupC1Body:
+      "Verbindung über Ethernet-Kabel. Keine komplexe Konfiguration erforderlich.",
     setupC2Title: "Zugriff von jedem Gerät",
-    setupC2Body: "Jeder in Ihrem lokalen Netzwerk kann es über seinen Browser nutzen.",
+    setupC2Body:
+      "Jeder in Ihrem lokalen Netzwerk kann es über seinen Browser nutzen.",
     setupC3Title: "Internet-isoliert",
-    setupC3Body: "Nicht aus dem Internet erreichbar. Optionales ausgehendes VPN für Updates.",
+    setupC3Body:
+      "Nicht aus dem Internet erreichbar. Optionales ausgehendes VPN für Updates.",
 
     pricingTitle: "Preise",
     pricingLead:
@@ -411,7 +425,7 @@ export const translations = {
     formThanksBody: "Ich melde mich so schnell wie möglich bei Ihnen.",
 
     footerLeft: "Holoptic Kft • Budapest",
-    backToTop: "Nach oben"
+    backToTop: "Nach oben",
   },
   fr: {
     langName: "Français",
@@ -460,11 +474,14 @@ export const translations = {
     modelsLead:
       "Avec 128 Go de mémoire unifiée, vous pouvez exécuter des modèles sérieux localement, généralement sous forme quantifiée, y compris de puissants assistants de codage et généraux.",
     modelsC1Title: "Assistants de codage",
-    modelsC1Body: "Idéal pour la revue de code, le refactoring et les outils internes.",
+    modelsC1Body:
+      "Idéal pour la revue de code, le refactoring et les outils internes.",
     modelsC2Title: "Assistants généraux",
-    modelsC2Body: "Bon pour les bases de connaissances internes, la synthèse et l'écriture.",
+    modelsC2Body:
+      "Bon pour les bases de connaissances internes, la synthèse et l'écriture.",
     modelsC3Title: "RAG privé",
-    modelsC3Body: "Discutez avec vos propres documents tout en gardant tout sur site.",
+    modelsC3Body:
+      "Discutez avec vos propres documents tout en gardant tout sur site.",
     modelsNote:
       "L'adéquation exacte dépend du niveau de quantification, de la taille du contexte et de la charge de travail. Je recommande une configuration stable pour votre cas d'usage.",
 
@@ -472,11 +489,14 @@ export const translations = {
     setupLead:
       "Connectez la machine à votre réseau local avec un câble ethernet. Toute personne sur votre réseau peut y accéder via un navigateur web. Le système est isolé d'Internet par défaut et peut éventuellement se connecter via VPN.",
     setupC1Title: "Branchez sur votre réseau",
-    setupC1Body: "Connexion par câble ethernet. Aucune configuration complexe nécessaire.",
+    setupC1Body:
+      "Connexion par câble ethernet. Aucune configuration complexe nécessaire.",
     setupC2Title: "Accès depuis n'importe quel appareil",
-    setupC2Body: "Toute personne sur votre réseau local peut l'utiliser via son navigateur.",
+    setupC2Body:
+      "Toute personne sur votre réseau local peut l'utiliser via son navigateur.",
     setupC3Title: "Isolé d'Internet",
-    setupC3Body: "Non accessible depuis Internet. VPN sortant optionnel pour les mises à jour.",
+    setupC3Body:
+      "Non accessible depuis Internet. VPN sortant optionnel pour les mises à jour.",
 
     pricingTitle: "Tarifs",
     pricingLead:
@@ -514,7 +534,7 @@ export const translations = {
     formThanksBody: "Je vous répondrai dès que possible.",
 
     footerLeft: "Holoptic Kft • Budapest",
-    backToTop: "Retour en haut"
+    backToTop: "Retour en haut",
   },
   it: {
     langName: "Italiano",
@@ -544,7 +564,8 @@ export const translations = {
     homeSpec4: "SSD NVMe da 2 TB",
     homePriceHw: "hardware (nuovo)",
     homePriceSetup: "installazione Linux sicura e hardening",
-    homeCardFoot: "Il prezzo finale dipende dalla disponibilità e dalle tue esigenze.",
+    homeCardFoot:
+      "Il prezzo finale dipende dalla disponibilità e dalle tue esigenze.",
 
     whyTitle: "Perché l'IA locale",
     whyLead:
@@ -563,7 +584,8 @@ export const translations = {
     modelsLead:
       "Con 128 GB di memoria unificata puoi eseguire modelli seri localmente, tipicamente in forma quantizzata, inclusi potenti assistenti di codifica e generali.",
     modelsC1Title: "Assistenti di codifica",
-    modelsC1Body: "Ottimo per revisione del codice, refactoring e strumenti interni.",
+    modelsC1Body:
+      "Ottimo per revisione del codice, refactoring e strumenti interni.",
     modelsC2Title: "Assistenti generali",
     modelsC2Body: "Buono per basi di conoscenza interne, sintesi e scrittura.",
     modelsC3Title: "RAG privato",
@@ -575,11 +597,14 @@ export const translations = {
     setupLead:
       "Collega la macchina alla tua rete locale con un cavo ethernet. Chiunque sulla tua rete può accedervi tramite browser web. Il sistema è isolato da Internet per impostazione predefinita e può opzionalmente connettersi in uscita tramite VPN.",
     setupC1Title: "Collega alla tua rete",
-    setupC1Body: "Connessione tramite cavo ethernet. Nessuna configurazione complessa necessaria.",
+    setupC1Body:
+      "Connessione tramite cavo ethernet. Nessuna configurazione complessa necessaria.",
     setupC2Title: "Accesso da qualsiasi dispositivo",
-    setupC2Body: "Chiunque sulla tua rete locale può usarlo tramite il proprio browser.",
+    setupC2Body:
+      "Chiunque sulla tua rete locale può usarlo tramite il proprio browser.",
     setupC3Title: "Isolato da Internet",
-    setupC3Body: "Non accessibile da Internet. VPN in uscita opzionale per aggiornamenti.",
+    setupC3Body:
+      "Non accessibile da Internet. VPN in uscita opzionale per aggiornamenti.",
 
     pricingTitle: "Prezzi",
     pricingLead:
@@ -617,7 +642,7 @@ export const translations = {
     formThanksBody: "Ti risponderò il prima possibile.",
 
     footerLeft: "Holoptic Kft • Budapest",
-    backToTop: "Torna su"
+    backToTop: "Torna su",
   },
   es: {
     langName: "Español",
@@ -647,7 +672,8 @@ export const translations = {
     homeSpec4: "SSD NVMe de 2 TB",
     homePriceHw: "hardware (nuevo)",
     homePriceSetup: "instalación Linux segura y hardening",
-    homeCardFoot: "El precio final depende de la disponibilidad y tus requisitos.",
+    homeCardFoot:
+      "El precio final depende de la disponibilidad y tus requisitos.",
 
     whyTitle: "Por qué IA local",
     whyLead:
@@ -666,21 +692,27 @@ export const translations = {
     setupLead:
       "Conecta la máquina a tu red local con un cable ethernet. Cualquiera en tu red puede acceder a través de un navegador web. El sistema está aislado de Internet por defecto y puede conectarse opcionalmente mediante VPN.",
     setupC1Title: "Conecta a tu red",
-    setupC1Body: "Conexión por cable ethernet. No se necesita configuración compleja.",
+    setupC1Body:
+      "Conexión por cable ethernet. No se necesita configuración compleja.",
     setupC2Title: "Acceso desde cualquier dispositivo",
-    setupC2Body: "Cualquiera en tu red local puede usarlo a través de su navegador.",
+    setupC2Body:
+      "Cualquiera en tu red local puede usarlo a través de su navegador.",
     setupC3Title: "Aislado de Internet",
-    setupC3Body: "No accesible desde Internet. VPN saliente opcional para actualizaciones.",
+    setupC3Body:
+      "No accesible desde Internet. VPN saliente opcional para actualizaciones.",
 
     modelsTitle: "Qué puede ejecutar (ejemplos)",
     modelsLead:
       "Con 128 GB de memoria unificada puedes ejecutar modelos serios localmente, típicamente en forma cuantizada, incluyendo potentes asistentes de codificación y generales.",
     modelsC1Title: "Asistentes de codificación",
-    modelsC1Body: "Ideal para revisión de código, refactorización y herramientas internas.",
+    modelsC1Body:
+      "Ideal para revisión de código, refactorización y herramientas internas.",
     modelsC2Title: "Asistentes generales",
-    modelsC2Body: "Bueno para bases de conocimiento internas, resúmenes y escritura.",
+    modelsC2Body:
+      "Bueno para bases de conocimiento internas, resúmenes y escritura.",
     modelsC3Title: "RAG privado",
-    modelsC3Body: "Chatea con tus propios documentos manteniendo todo en las instalaciones.",
+    modelsC3Body:
+      "Chatea con tus propios documentos manteniendo todo en las instalaciones.",
     modelsNote:
       "La idoneidad exacta depende del nivel de cuantización, tamaño del contexto y carga de trabajo. Recomiendo una configuración estable para tu caso de uso.",
 
@@ -720,6 +752,6 @@ export const translations = {
     formThanksBody: "Te responderé lo antes posible.",
 
     footerLeft: "Holoptic Kft • Budapest",
-    backToTop: "Volver arriba"
-  }
+    backToTop: "Volver arriba",
+  },
 };

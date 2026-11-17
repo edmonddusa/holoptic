@@ -1,15 +1,19 @@
-import { Outlet } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
-
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 export default function Layout() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <>
       <Header />
-      <div style={{ flex: 1, overflowY: 'auto' }} data-scroll-container>
+      <main id="main">
         <Outlet />
-      </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

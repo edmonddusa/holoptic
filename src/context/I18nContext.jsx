@@ -1,28 +1,28 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import { translations } from '../i18n/translations';
+import { createContext, useContext, useState, useEffect } from "react";
+import { translations } from "../i18n/translations";
 
 const I18nContext = createContext();
 
-const SUPPORTED = ['en', 'hu', 'sv', 'de', 'fr', 'it', 'es'];
+const SUPPORTED = ["en", "hu", "sv", "de", "fr", "it", "es"];
 
 function getBrowserLanguage() {
   // Get browser language (e.g., "en-US" or "en")
   const browserLang = navigator.language || navigator.userLanguage;
   // Extract just the language code (e.g., "en" from "en-US")
-  const langCode = browserLang.split('-')[0].toLowerCase();
+  const langCode = browserLang.split("-")[0].toLowerCase();
   // Return if supported, otherwise null
   return SUPPORTED.includes(langCode) ? langCode : null;
 }
 
 function getLangFromStorage() {
-  const lang = (localStorage.getItem('lang') || '').toLowerCase();
+  const lang = (localStorage.getItem("lang") || "").toLowerCase();
   return SUPPORTED.includes(lang) ? lang : null;
 }
 
 export function I18nProvider({ children }) {
   const [lang, setLangState] = useState(() => {
     // Priority: localStorage > browser language > default to English
-    return getLangFromStorage() || getBrowserLanguage() || 'en';
+    return getLangFromStorage() || getBrowserLanguage() || "en";
   });
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export function I18nProvider({ children }) {
   }, [lang]);
 
   const setLang = (newLang) => {
-    localStorage.setItem('lang', newLang);
+    localStorage.setItem("lang", newLang);
     setLangState(newLang);
   };
 
@@ -49,7 +49,7 @@ export function I18nProvider({ children }) {
 export function useI18n() {
   const context = useContext(I18nContext);
   if (!context) {
-    throw new Error('useI18n must be used within I18nProvider');
+    throw new Error("useI18n must be used within I18nProvider");
   }
   return context;
 }

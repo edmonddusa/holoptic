@@ -1,155 +1,167 @@
-import { Link } from 'react-router-dom';
-import { useI18n } from '../context/I18nContext';
+import { Link } from "react-router-dom";
+import EnterpriseExperience from "../components/EnterpriseExperience";
 
+const services = [
+  {
+    n: "01",
+    title: "Cloud & Infrastructure",
+    desc: "Cloud architecture, migrations, infrastructure as code, container platforms, and reliable delivery pipelines.",
+    tech: "AWS · Terraform · Kubernetes · CI/CD",
+  },
+  {
+    n: "02",
+    title: "Database Engineering",
+    desc: "Performance, resilience, observability, and hands-on operational expertise for business-critical data systems.",
+    tech: "PostgreSQL · Cassandra · MySQL · DynamoDB",
+  },
+  {
+    n: "03",
+    title: "Software Engineering",
+    desc: "Well-architected applications, robust backend services, modern interfaces, and maintainable integrations.",
+    tech: "Java · Kotlin · Node.js · React · TypeScript",
+  },
+  {
+    n: "04",
+    title: "Private AI Systems",
+    desc: "On-premises inference, privacy-conscious AI deployment, and practical integration into existing workflows.",
+    tech: "Local inference · Linux · Data sovereignty",
+  },
+];
 export default function Home() {
-  const { t } = useI18n();
-
   return (
-    <main className="container">
-      <header className="hero" id="top">
-        <div className="hero-grid">
-          <div>
-            <div className="pill-row">
-              <div className="pill">{t('heroPill1')}</div>
-              <div className="pill">{t('heroPill2')}</div>
-              <div className="pill">{t('heroPill3')}</div>
-              <div className="pill">{t('heroPill4')}</div>
+    <>
+      <section className="hero">
+        <div className="hero-grid" aria-hidden="true" />
+        <div className="container hero-content">
+          <div className="eyebrow">
+            <span className="eyebrow-line" /> INDEPENDENT EUROPEAN ENGINEERING
+          </div>
+          <h1>
+            Engineering
+            <br />
+            <em>built to endure.</em>
+          </h1>
+          <p className="hero-lead">
+            We design, modernize, and maintain the systems businesses depend on
+            — from cloud infrastructure and critical databases to modern
+            software and private AI.
+          </p>
+          <div className="hero-actions">
+            <Link className="button button-gold" to="/expertise">
+              Explore our expertise <span>↗</span>
+            </Link>
+            <Link className="button button-outline" to="/contact">
+              Discuss a project <span>→</span>
+            </Link>
+          </div>
+          <div className="hero-foot">
+            <span>25+ YEARS OF ENGINEERING EXPERIENCE</span>
+            <span>BASED IN EUROPE · WORKING INTERNATIONALLY</span>
+          </div>
+        </div>
+        <div className="hero-ornament" aria-hidden="true">
+          H
+        </div>
+      </section>
+      <section className="section section-light">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <p className="kicker">WHAT WE DO</p>
+              <h2>
+                Deep expertise.
+                <br />
+                Practical outcomes.
+              </h2>
             </div>
-
-            <h1 className="headline">{t('homeTitle')}</h1>
-            <p className="subhead">{t('homeLead')}</p>
-
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', margin: '22px 0 6px' }}>
-              <Link to="/contact" className="btn primary">{t('homeCta1')}</Link>
-              <Link to="/pricing" className="btn">{t('homeCta2')}</Link>
-            </div>
-            <p className="subhead" style={{ fontSize: '12px', marginTop: '10px' }}>
-              {t('homeNote')}
+            <p>
+              Complex systems require more than fashionable tools. We bring
+              experienced engineering judgment to architecture, delivery,
+              performance, and long-term operation.
             </p>
           </div>
-
-          <aside className="card" aria-label="Hardware package">
-            <div style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-              <div style={{ flex: 1 }}>
-                <h3>{t('homeCardTitle')}</h3>
-                <ul className="spec">
-                  <li>{t('homeSpec1')}</li>
-                  <li>{t('homeSpec2')}</li>
-                  <li>{t('homeSpec3')}</li>
-                  <li>{t('homeSpec4')}</li>
-                </ul>
-
-                <table style={{ width: '100%', marginTop: '12px', fontSize: '14px' }}>
-                  <tbody>
-                    <tr>
-                      <td style={{ fontWeight: 'bold', fontSize: '20px', paddingRight: '12px', verticalAlign: 'top', whiteSpace: 'nowrap' }}>~€3,000</td>
-                      <td style={{ color: 'var(--muted)', fontSize: '13px', verticalAlign: 'top' }}>{t('homePriceHw')}</td>
-                    </tr>
-                    <tr>
-                      <td style={{ fontWeight: 'bold', fontSize: '20px', paddingRight: '12px', paddingTop: '8px', verticalAlign: 'top', whiteSpace: 'nowrap' }}>+€600</td>
-                      <td style={{ color: 'var(--muted)', fontSize: '13px', paddingTop: '8px', verticalAlign: 'top' }}>{t('homePriceSetup')}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="subhead" style={{ fontSize: '12px', marginTop: '10px' }}>
-                  {t('homeCardFoot')}
-                </p>
-              </div>
-              <img 
-                src="/assets/hardware.webp" 
-                alt="Minisforum AI PC" 
-                style={{ 
-                  width: '120px', 
-                  height: 'auto',
-                  objectFit: 'contain',
-                  flexShrink: 0
-                }} 
-              />
-            </div>
-          </aside>
-        </div>
-      </header>
-
-      <section className="section" id="why">
-        <h2 className="section-title">{t('whyTitle')}</h2>
-        <p className="section-lead">{t('whyLead')}</p>
-
-        <div className="grid-3">
-          <div className="card">
-            <h4>{t('whyC1Title')}</h4>
-            <p>{t('whyC1Body')}</p>
+          <div className="service-grid">
+            {services.map((s) => (
+              <article className="service-card" key={s.n}>
+                <div className="service-number">
+                  {s.n} <span>↗</span>
+                </div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+                <div className="service-tech">{s.tech}</div>
+              </article>
+            ))}
           </div>
-          <div className="card">
-            <h4>{t('whyC2Title')}</h4>
-            <p>{t('whyC2Body')}</p>
-          </div>
-          <div className="card">
-            <h4>{t('whyC3Title')}</h4>
-            <p>{t('whyC3Body')}</p>
+          <div className="section-link">
+            <Link to="/expertise">
+              View all capabilities <span>→</span>
+            </Link>
           </div>
         </div>
       </section>
-
-      <section className="section" id="setup">
-        <h2 className="section-title">{t('setupTitle')}</h2>
-        <p className="section-lead">{t('setupLead')}</p>
-
-        <div className="grid-3">
-          <div className="card">
-            <h4>{t('setupC1Title')}</h4>
-            <p>{t('setupC1Body')}</p>
+      <EnterpriseExperience />
+      <section className="section section-dark">
+        <div className="container statement">
+          <div>
+            <p className="kicker">OUR APPROACH</p>
+            <h2>
+              Architecture matters.
+              <br />
+              <em>Execution matters more.</em>
+            </h2>
           </div>
-          <div className="card">
-            <h4>{t('setupC2Title')}</h4>
-            <p>{t('setupC2Body')}</p>
-          </div>
-          <div className="card">
-            <h4>{t('setupC3Title')}</h4>
-            <p>{t('setupC3Body')}</p>
+          <div>
+            <p>
+              From first design decisions to production incidents, our focus is
+              on systems that remain understandable, secure, and operational
+              long after launch.
+            </p>
+            <ul className="principles">
+              <li>Engineering-led decisions</li>
+              <li>Production-minded delivery</li>
+              <li>Long-term maintainability</li>
+            </ul>
+            <Link className="text-link" to="/about">
+              More about Holoptic →
+            </Link>
           </div>
         </div>
       </section>
-
-      <section className="section" id="models">
-        <h2 className="section-title">{t('modelsTitle')}</h2>
-        <p className="section-lead">{t('modelsLead')}</p>
-
-        <div className="grid-3">
-          <div className="card">
-            <h4>{t('modelsC1Title')}</h4>
-            <p>{t('modelsC1Body')}</p>
-            <ul className="list">
-              <li>DeepSeek Coder (family)</li>
-              <li>Qwen2.5 Coder (family)</li>
-              <li>Llama code tuned variants</li>
-            </ul>
+      <section className="section section-light">
+        <div className="container ai-feature">
+          <div>
+            <p className="kicker">SPECIALIST CAPABILITY</p>
+            <h2>
+              Private AI.
+              <br />
+              On your terms.
+            </h2>
+            <p>
+              Explore secure, locally deployed AI infrastructure designed for
+              organizations that value control over their data and systems.
+            </p>
+            <a className="button button-dark" href="https://ai.holoptic.org/">
+              Explore Holoptic AI ↗
+            </a>
           </div>
-
-          <div className="card">
-            <h4>{t('modelsC2Title')}</h4>
-            <p>{t('modelsC2Body')}</p>
-            <ul className="list">
-              <li>Llama 3 (family)</li>
-              <li>Qwen2.5 (family)</li>
-              <li>Mistral or Mixtral (family)</li>
-            </ul>
-          </div>
-
-          <div className="card">
-            <h4>{t('modelsC3Title')}</h4>
-            <p>{t('modelsC3Body')}</p>
-            <ul className="list">
-              <li>Local embeddings</li>
-              <li>Vector search</li>
-              <li>Role based access</li>
-            </ul>
+          <div className="ai-visual" aria-hidden="true">
+            <span>PRIVATE</span>
+            <div className="ai-core">◇</div>
+            <span>BY DESIGN</span>
           </div>
         </div>
-
-        <p className="subhead" style={{ fontSize: '12px', marginTop: '12px' }}>
-          {t('modelsNote')}
-        </p>
       </section>
-    </main>
+      <section className="cta-section">
+        <div className="container cta-inner">
+          <div>
+            <p className="kicker">LET'S BUILD SOMETHING RELIABLE</p>
+            <h2>Have a difficult engineering challenge?</h2>
+          </div>
+          <Link className="button button-gold" to="/contact">
+            Start a conversation →
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
