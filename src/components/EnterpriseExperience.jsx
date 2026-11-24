@@ -1,35 +1,28 @@
-const companies = [
-  { name: "SAP" },
-  { name: "Jaguar Land Rover" },
-  { name: "Nasdaq" },
-];
+import { useI18n } from "../i18n/I18n";
+
+const companies = ["SAP", "Jaguar Land Rover", "Nasdaq"];
 
 export default function EnterpriseExperience() {
+  const { d } = useI18n();
+  const t = d.enterprise;
   return (
     <section className="enterprise-experience">
       <div className="enterprise-inner">
-        <p className="enterprise-eyebrow">ENTERPRISE EXPERIENCE</p>
+        <p className="enterprise-eyebrow">{t.eyebrow}</p>
 
-        <h2>Experience earned in demanding environments.</h2>
+        <h2>{t.title}</h2>
 
-        <p className="enterprise-description">
-          Professional engineering experience spanning internationally
-          recognized organizations in enterprise technology, automotive
-          engineering, and financial markets.
-        </p>
+        <p className="enterprise-description">{t.description}</p>
 
         <div className="enterprise-companies">
-          {companies.map((company) => (
-            <div className="enterprise-company" key={company.name}>
-              {company.name}
+          {companies.map((name) => (
+            <div className="enterprise-company" key={name}>
+              {name}
             </div>
           ))}
         </div>
 
-        <p className="enterprise-disclaimer">
-          Selected organizations from previous professional engineering
-          engagements.
-        </p>
+        <p className="enterprise-disclaimer">{t.disclaimer}</p>
       </div>
     </section>
   );

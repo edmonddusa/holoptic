@@ -57,12 +57,20 @@ npx prettier --write src index.html
 │   └── images/              # Logos, background photos, social preview image
 ├── src/
 │   ├── main.jsx             # Entry point: mounts <App/> and imports index.css
-│   ├── App.jsx              # Route table
+│   ├── App.jsx              # Route table (one tree, optional language prefix)
 │   ├── index.css            # All site styles
+│   ├── i18n/
+│   │   ├── languages.js     # Supported languages, URL helpers, language detection
+│   │   ├── I18n.jsx         # LangLayout route element, useI18n(), document language/SEO tags
+│   │   └── en.js … es.js    # One dictionary per language (en.js is the master copy)
 │   ├── components/
-│   │   ├── Layout.jsx       # Header, page content, Footer; scrolls to top on route change
-│   │   ├── Header.jsx       # Logo, navigation, mobile menu toggle
+│   │   ├── Layout.jsx       # Header, page content, Footer; scrolls to top on page change
+│   │   ├── Header.jsx       # Logo, navigation, mobile menu, language switcher
+│   │   ├── LanguageSwitcher.jsx
 │   │   ├── Footer.jsx
+│   │   ├── Emblem.jsx       # Animated inline logo (draw-on, bezel, pulses, shine, scroll)
+│   │   ├── EmblemParticles.jsx  # Logo as gold particles (Home, Private AI box)
+│   │   ├── WaveField.jsx    # Interactive WebGL dot wave (Home, About)
 │   │   └── EnterpriseExperience.jsx  # Section used on Home
 │   └── pages/
 │       ├── Home.jsx
@@ -74,7 +82,7 @@ npx prettier --write src index.html
 
 ## Pages and routing
 
-Routes are defined in `src/App.jsx`:
+Routes are defined in `src/App.jsx`. Every path also exists with a language prefix (see [Languages](#languages)):
 
 | Path         | Component   |
 | ------------ | ----------- |
@@ -87,14 +95,27 @@ Routes are defined in `src/App.jsx`:
 To add a page:
 
 1. Create the component in `src/pages/`.
-2. Add a `<Route>` for it in `src/App.jsx`.
-3. Add a `[path, label]` entry to the `links` array in `src/components/Header.jsx`, and a `<Link>` in `Footer.jsx` if it belongs there too.
+2. Add a `<Route>` for it inside the `/:lang?` route in `src/App.jsx`.
+3. Add its text to every dictionary in `src/i18n/` (at least `en.js`; other languages fall back to English).
+4. Add a `[path, key]` entry to the `links` array in `src/components/Header.jsx`, and a `<Link to={lp(path)}>` in `Footer.jsx` if it belongs there too. Always build internal links with `lp()` from `useI18n()` so they stay in the current language.
 
-The site has no contact form or backend. The Contact page uses a `mailto:` link.
+The Contact page form posts to [Formspree](https://formspree.io/) (the same form as ai.holoptic.org). Each enquiry includes `source=holoptic.org` and the visitor's `language`; the topic is always sent in English.
+
+## Languages
+
+The site is available in English, Hungarian, Swedish, German, French, Italian and Spanish.
+
+- **URLs:** English is at the root (`/about`); other languages use a prefix (`/hu/about`, `/de/about`, …). `/en/...` redirects to the unprefixed URL.
+- **Detection:** on the first English URL of a visit, the visitor is sent to their saved choice (`localStorage` key `holoptic-lang`) or, failing that, the first supported language in their browser settings. Choosing a language in the switcher saves it. Prefixed URLs are never redirected.
+- **Text:** each language has a dictionary in `src/i18n/`. `en.js` is the master copy; anything a translation leaves out falls back to English, item by item. Components read text with `const { d } = useI18n()`.
+- **SEO:** `LangLayout` sets `<html lang>`, the page title and description, the canonical URL and `hreflang` alternates for every page. Link previews (Open Graph) come from the static `index.html` and stay in English.
+- **Not translated on purpose:** the HOLOPTIC / TECHNOLOGY ENGINEERING lock-up, "Private AI", company and technology names, and the enquiry email subject.
+
+To add a language, add it to `LANGUAGES` in `src/i18n/languages.js`, create its dictionary, and import it in `src/i18n/I18n.jsx`.
 
 ### Routing on GitHub Pages
 
-GitHub Pages only serves real files. If someone opens or reloads a path like `/about` directly, Pages finds no file there and serves `404.html` instead. The build script copies `index.html` to `dist/404.html`, so that response is the app itself, and React Router then shows the right page.
+GitHub Pages only serves real files. If someone opens or reloads a path like `/about` or `/hu/about` directly, Pages finds no file there and serves `404.html` instead. The build script copies `index.html` to `dist/404.html`, so that response is the app itself, and React Router then shows the right page.
 
 Visitors see the correct page, but the HTTP status is still 404. That's a limitation of GitHub Pages.
 
@@ -118,13 +139,13 @@ Background photos are linked from the CSS with absolute paths such as `url('/ima
 
 Anything in `public/` is served from the site root, so `public/images/foo.webp` is available at `/images/foo.webp`. Use WebP for photos.
 
-| File                                                          | Used by                                       |
-| ------------------------------------------------------------- | --------------------------------------------- |
-| `images/holoptic-algiz.svg`                                   | Favicon, header logo, JSON-LD logo            |
-| `images/holoptic-social.png` (1200×630)                       | `og:image` / `twitter:image` link previews    |
-| `images/*.webp` photos                                       | Page hero backgrounds (in `index.css`)        |
-| `images/holoptic-horizontal.svg`                              | Not used on the site (spare logo variant)     |
-| `images/holoptic-linkedin-profile.png`                        | Not used on the site (LinkedIn profile image) |
+| File                                    | Used by                                       |
+| --------------------------------------- | --------------------------------------------- |
+| `images/holoptic-algiz.svg`             | Favicon, header logo, JSON-LD logo            |
+| `images/holoptic-social.png` (1200×630) | `og:image` / `twitter:image` link previews    |
+| `images/*.webp` photos                  | Page hero backgrounds (in `index.css`)        |
+| `images/holoptic-horizontal.svg`        | Not used on the site (spare logo variant)     |
+| `images/holoptic-linkedin-profile.png`  | Not used on the site (LinkedIn profile image) |
 
 ### Regenerating the social preview image
 

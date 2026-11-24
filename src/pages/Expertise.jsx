@@ -1,36 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Lines, useI18n } from "../i18n/I18n";
 
-const groups = [
-  {
-    id: "cloud",
-    title: "Cloud & Infrastructure",
-    short: "Cloud & Infrastructure",
-    desc: "Cloud migration and modernization, AWS architecture, Terraform, Kubernetes, Docker, delivery automation, observability, and operational resilience.",
-    stack: ["AWS", "Azure", "GCP", "Terraform", "Kubernetes", "GitHub Actions", "GitLab CI/CD"],
-  },
-  {
-    id: "databases",
-    title: "Database Engineering",
-    short: "Database Engineering",
-    desc: "Database design, production troubleshooting, incident resolution, monitoring, administration, configuration, and performance optimization.",
-    stack: ["PostgreSQL", "Cassandra", "MySQL", "DynamoDB", "SQL"],
-  },
-  {
-    id: "software",
-    title: "Software Engineering",
-    short: "Software Engineering",
-    desc: "Backend services, APIs, distributed systems, frontend applications, integration engineering, testing, and maintainable software architecture.",
-    stack: ["Java", "Kotlin", "Node.js", "React", "TypeScript", "REST APIs"],
-  },
-  {
-    id: "private-ai",
-    title: "Private AI Infrastructure",
-    short: "Private AI",
-    desc: "Local AI deployments, secure Linux environments, inference infrastructure, private knowledge workflows, and system integration.",
-    stack: ["On-premises AI", "Linux", "Private inference", "Data control"],
-  },
-];
+// Section anchors, in page order (Home cards link to these).
+const ids = ["cloud", "databases", "software", "private-ai"];
 
 // The section being read: the last one whose top has passed just below the
 // sticky header. At the very bottom of the page, the last section wins.
@@ -41,7 +14,8 @@ function useActiveSection(ids) {
     const update = () => {
       frame = 0;
       const atBottom =
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
       let current = ids[0];
       for (const id of ids) {
         const el = document.getElementById(id);
@@ -64,32 +38,28 @@ function useActiveSection(ids) {
   return active;
 }
 
-const ids = groups.map((group) => group.id);
-
 export default function Expertise() {
   const location = useLocation();
   const arrivedAt = location.hash.slice(1);
   const active = useActiveSection(ids);
+  const { d, lp } = useI18n();
+  const t = d.expertise;
+  const groups = t.groups.map((group, i) => ({ ...group, id: ids[i] }));
 
   return (
     <>
       <section className="page-hero expertise-hero">
         <div className="container">
-          <p className="kicker">OUR EXPERTISE</p>
+          <p className="kicker">{t.kicker}</p>
           <h1>
-            Engineering across
-            <br />
-            <em>the entire stack.</em>
+            <Lines lines={t.title} emLast />
           </h1>
-          <p>
-            Specialist capabilities, grounded in decades of hands-on software
-            and infrastructure work.
-          </p>
+          <p>{t.lead}</p>
         </div>
       </section>
       <section className="section section-light">
         <div className="container expertise-layout">
-          <nav className="expertise-index-nav" aria-label="Expertise areas">
+          <nav className="expertise-index-nav" aria-label={t.indexLabel}>
             {groups.map((group, i) => (
               <Link
                 key={group.id}
@@ -108,13 +78,17 @@ export default function Expertise() {
                 className={`expertise-item${group.id === arrivedAt ? " is-arrived" : ""}`}
                 id={group.id}
                 // A new key restarts the arrival highlight on every visit.
-                key={group.id === arrivedAt ? `${group.id}-${location.key}` : group.id}
+                key={
+                  group.id === arrivedAt
+                    ? `${group.id}-${location.key}`
+                    : group.id
+                }
               >
                 <span className="expertise-index">0{i + 1}</span>
                 <div>
                   <h2>{group.title}</h2>
                   <p>{group.desc}</p>
-                  <ul className="tech-tags" aria-label="Technologies">
+                  <ul className="tech-tags" aria-label={t.techLabel}>
                     {group.stack.map((tech) => (
                       <li key={tech}>{tech}</li>
                     ))}
@@ -128,15 +102,12 @@ export default function Expertise() {
       <section className="cta-section">
         <div className="container cta-inner">
           <div>
-            <p className="kicker">WORK WITH HOLOPTIC</p>
-            <h2>Need an experienced engineering partner?</h2>
-            <p>
-              Tell us about the system you need designed, modernized, or kept
-              running.
-            </p>
+            <p className="kicker">{t.ctaKicker}</p>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
           </div>
-          <Link className="button button-gold" to="/contact">
-            Get in touch →
+          <Link className="button button-gold" to={lp("/contact")}>
+            {t.ctaButton}
           </Link>
         </div>
       </section>

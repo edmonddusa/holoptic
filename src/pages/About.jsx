@@ -1,97 +1,41 @@
 import { Link } from "react-router-dom";
 import WaveField from "../components/WaveField";
+import { Lines, useI18n } from "../i18n/I18n";
 
-const principles = [
-  {
-    number: "01",
-    title: "Engineering judgment",
-    description:
-      "Technology choices should follow real requirements, not trends. We favor proven architectures, clear trade-offs, and solutions appropriate to the problem.",
-  },
-  {
-    number: "02",
-    title: "Production responsibility",
-    description:
-      "Engineering does not end at deployment. Performance, security, observability, and operational resilience are part of the design from the beginning.",
-  },
-  {
-    number: "03",
-    title: "Long-term thinking",
-    description:
-      "Maintainable systems are built through deliberate decisions. We value clarity, simplicity, and the ability to evolve without unnecessary complexity.",
-  },
-];
-
-const facts = [
-  { value: "25+", label: "Years of hands-on engineering experience" },
-  { value: "3", label: "Enterprise sectors: software, automotive, finance" },
-  { value: "Budapest", label: "Based in Hungary, serving international clients" },
-];
-
-const companies = [
-  { name: "SAP", sector: "Enterprise software" },
-  { name: "Jaguar Land Rover", sector: "Automotive" },
-  { name: "Nasdaq", sector: "Financial markets" },
-];
+const COMPANIES = ["SAP", "Jaguar Land Rover", "Nasdaq"];
 
 export default function About() {
+  const { d, lp } = useI18n();
+  const t = d.about;
   return (
     <>
       <section className="page-hero about-hero">
         <div className="container">
-          <p className="kicker">ABOUT HOLOPTIC</p>
+          <p className="kicker">{t.kicker}</p>
           <h1>
-            Independent thinking.
-            <br />
-            <em>Engineering discipline.</em>
+            <Lines lines={t.title} emLast />
           </h1>
-          <p>
-            European roots. International experience. Engineering built to
-            endure.
-          </p>
+          <p>{t.lead}</p>
         </div>
       </section>
 
       <section className="section section-light">
         <div className="container about-grid">
           <div>
-            <p className="kicker">WHO WE ARE</p>
+            <p className="kicker">{t.whoKicker}</p>
             <h2>
-              Technology is a means.
-              <br />
-              Reliability is the goal.
+              <Lines lines={t.whoTitle} />
             </h2>
           </div>
 
           <div>
-            <p>
-              Holoptic is an independent technology engineering consultancy
-              based in Budapest, Hungary, serving organizations across
-              international markets.
-            </p>
-
-            <p>
-              Our expertise spans cloud infrastructure, software architecture,
-              enterprise databases, DevOps, and privately deployed artificial
-              intelligence systems.
-            </p>
-
-            <p>
-              Built on more than 25 years of hands-on engineering experience,
-              Holoptic combines deep technical knowledge with the practical
-              judgment developed through designing, delivering, and operating
-              business-critical systems.
-            </p>
-
-            <p>
-              We believe successful engineering is measured not merely by what
-              can be built, but by what continues to work reliably years after
-              delivery.
-            </p>
+            {t.whoText.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
         <div className="container about-facts">
-          {facts.map((fact) => (
+          {t.facts.map((fact) => (
             <div className="about-fact" key={fact.value}>
               <strong>{fact.value}</strong>
               <span>{fact.label}</span>
@@ -105,23 +49,18 @@ export default function About() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <p className="kicker">OUR PRINCIPLES</p>
+              <p className="kicker">{t.principlesKicker}</p>
               <h2>
-                Built with purpose.
-                <br />
-                <em>Designed for longevity.</em>
+                <Lines lines={t.principlesTitle} emLast />
               </h2>
             </div>
-            <p>
-              Our approach is grounded in practical experience, engineering
-              discipline, and responsibility for the systems we create.
-            </p>
+            <p>{t.principlesLead}</p>
           </div>
 
           <div className="service-grid">
-            {principles.map((principle) => (
-              <article className="service-card" key={principle.number}>
-                <div className="service-number">{principle.number}</div>
+            {t.principles.map((principle, i) => (
+              <article className="service-card" key={principle.title}>
+                <div className="service-number">0{i + 1}</div>
                 <h3>{principle.title}</h3>
                 <p>{principle.description}</p>
               </article>
@@ -133,64 +72,41 @@ export default function About() {
       <section className="section section-light">
         <div className="container about-grid">
           <div>
-            <p className="kicker">ENTERPRISE EXPERIENCE</p>
+            <p className="kicker">{t.enterpriseKicker}</p>
             <h2>
-              Experience across
-              <br />
-              demanding industries.
+              <Lines lines={t.enterpriseTitle} />
             </h2>
           </div>
 
           <div>
-            <p>
-              Our professional engineering background includes engagements
-              involving internationally recognized organizations in enterprise
-              software, automotive engineering, and financial markets.
-            </p>
-
-            <p>
-              These environments have shaped an engineering approach that
-              emphasizes reliability, scalability, disciplined delivery, and an
-              understanding of the operational demands placed on enterprise
-              technology.
-            </p>
-
-            <p>
-              From financial technology to automotive and enterprise software,
-              we bring experience gained in complex technical environments to
-              every new engagement.
-            </p>
+            {t.enterpriseText.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
         <div className="container">
           <div className="about-companies">
-            {companies.map((company) => (
-              <div className="about-company" key={company.name}>
-                <strong>{company.name}</strong>
-                <span>{company.sector}</span>
+            {COMPANIES.map((name, i) => (
+              <div className="about-company" key={name}>
+                <strong>{name}</strong>
+                <span>{t.sectors[i]}</span>
               </div>
             ))}
           </div>
-          <p className="about-companies-note">
-            Selected organizations from previous professional engineering
-            engagements.
-          </p>
+          <p className="about-companies-note">{t.companiesNote}</p>
         </div>
       </section>
 
       <section className="cta-section">
         <div className="container cta-inner">
           <div>
-            <p className="kicker">WORK WITH HOLOPTIC</p>
-            <h2>Let's build something that lasts.</h2>
-            <p>
-              Discuss your engineering challenges directly with an experienced
-              technical partner.
-            </p>
+            <p className="kicker">{t.ctaKicker}</p>
+            <h2>{t.ctaTitle}</h2>
+            <p>{t.ctaText}</p>
           </div>
 
-          <Link className="button button-gold" to="/contact">
-            Start a conversation →
+          <Link className="button button-gold" to={lp("/contact")}>
+            {t.ctaButton}
           </Link>
         </div>
       </section>

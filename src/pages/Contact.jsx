@@ -1,17 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import { Lines, useI18n, withEmail } from "../i18n/I18n";
 
 // Formspree form that emails enquiries to eddie@holoptic.org
 // (shared with ai.holoptic.org; the subject line tells them apart).
 const FORM_ENDPOINT = "https://formspree.io/f/maqdeebp";
 const EMAIL = "eddie@holoptic.org";
-
-const topics = [
-  "Cloud & Infrastructure",
-  "Database Engineering",
-  "Software Engineering",
-  "Private AI",
-  "Something else",
-];
 
 // Sending lasts at least this long, so the animation never just flickers.
 const MIN_SENDING_MS = 1100;
@@ -39,6 +32,8 @@ function useReveal() {
 }
 
 function EnquiryForm() {
+  const { d, en, lang } = useI18n();
+  const f = d.contact.form;
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
   const [failures, setFailures] = useState(0); // replays the error shake
 
@@ -73,17 +68,14 @@ function EnquiryForm() {
           <circle cx="26" cy="26" r="24" />
           <path d="M15 27 l7.5 7.5 L37 19" />
         </svg>
-        <h3>Thank you.</h3>
-        <p>
-          Your message is on its way. We read every enquiry personally and will
-          get back to you by email.
-        </p>
+        <h3>{f.doneTitle}</h3>
+        <p>{f.doneText}</p>
         <button
           type="button"
           className="text-button"
           onClick={() => setStatus("idle")}
         >
-          Send another message
+          {f.again}
         </button>
       </div>
     );
@@ -101,6 +93,7 @@ function EnquiryForm() {
         value="New enquiry from holoptic.org"
       />
       <input type="hidden" name="source" value="holoptic.org" />
+      <input type="hidden" name="language" value={lang} />
       {/* Spam trap: hidden from people, filled in by bots. */}
       <input
         type="text"
@@ -114,50 +107,55 @@ function EnquiryForm() {
       <fieldset className="enquiry-fields" disabled={status === "sending"}>
         <div className="enquiry-row">
           <label>
-            <span>Name *</span>
+            <span>{f.name}</span>
             <input name="name" type="text" autoComplete="name" required />
           </label>
           <label>
-            <span>Company</span>
+            <span>{f.company}</span>
             <input name="company" type="text" autoComplete="organization" />
           </label>
         </div>
         <div className="enquiry-row">
           <label>
-            <span>Email *</span>
+            <span>{f.email}</span>
             <input name="email" type="email" autoComplete="email" required />
           </label>
           <label>
-            <span>Phone (optional)</span>
+            <span>{f.phone}</span>
             <input name="phone" type="tel" autoComplete="tel" />
           </label>
         </div>
         <label>
-          <span>What can we help with?</span>
+          <span>{f.topicLabel}</span>
           <select name="topic" defaultValue="">
             <option value="" disabled>
-              Choose an area
+              {f.topicPlaceholder}
             </option>
-            {topics.map((topic) => (
-              <option key={topic}>{topic}</option>
+            {/* Shown in the visitor's language, sent in English. */}
+            {f.topics.map((topic, i) => (
+              <option
+                key={en.contact.form.topics[i]}
+                value={en.contact.form.topics[i]}
+              >
+                {topic}
+              </option>
             ))}
           </select>
         </label>
         <label>
-          <span>Message *</span>
+          <span>{f.message}</span>
           <textarea
             name="message"
             rows={6}
             required
-            placeholder="The system, the problem, and any constraints or timeline."
+            placeholder={f.messagePlaceholder}
           />
         </label>
       </fieldset>
 
       {status === "error" && (
         <p className="enquiry-error" role="alert" key={failures}>
-          Sorry, the message couldn't be sent. Please try again, or email{" "}
-          <a href={`mailto:${EMAIL}`}>{EMAIL}</a> directly.
+          {withEmail(f.error, EMAIL)}
         </p>
       )}
 
@@ -169,7 +167,7 @@ function EnquiryForm() {
         >
           {status === "sending" ? (
             <>
-              Sending
+              {f.sending}
               <span className="enquiry-dots" aria-hidden="true">
                 <i>.</i>
                 <i>.</i>
@@ -177,58 +175,42 @@ function EnquiryForm() {
               </span>
             </>
           ) : (
-            "Send enquiry →"
+            f.send
           )}
         </button>
-        <p>
-          Or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-        </p>
+        <p>{withEmail(f.orEmail, EMAIL)}</p>
       </div>
-      <p className="enquiry-privacy">
-        Your details are sent through Formspree, a US-based form service, and
-        are used only to reply to your enquiry. We don't share them or add you
-        to any mailing list. To have them deleted, email{" "}
-        <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
-      </p>
+      <p className="enquiry-privacy">{withEmail(f.privacy, EMAIL)}</p>
     </form>
   );
 }
 
 export default function Contact() {
+  const { d } = useI18n();
+  const t = d.contact;
   const introRef = useReveal();
   const panelRef = useReveal();
   return (
     <>
       <section className="page-hero contact-hero">
         <div className="container">
-          <p className="kicker">CONTACT</p>
+          <p className="kicker">{t.kicker}</p>
           <h1>
-            Let's talk about
-            <br />
-            <em>your next challenge.</em>
+            <Lines lines={t.title} emLast />
           </h1>
-          <p>
-            Architecture, modernization, performance, or delivery — tell us what
-            you're working on.
-          </p>
+          <p>{t.lead}</p>
         </div>
       </section>
       <section className="section section-light">
         <div className="container contact-grid">
           <div className="reveal" ref={introRef}>
-            <p className="kicker">START A CONVERSATION</p>
-            <h2>Good engineering starts with a clear discussion.</h2>
-            <p>
-              We work with teams looking for experienced technical guidance and
-              hands-on delivery. Share your objectives, constraints, and
-              timeline.
-            </p>
-            <p className="contact-note">
-              Budapest, Hungary · International and remote engagements
-            </p>
+            <p className="kicker">{t.introKicker}</p>
+            <h2>{t.introTitle}</h2>
+            <p>{t.introText}</p>
+            <p className="contact-note">{t.note}</p>
           </div>
           <div className="contact-panel reveal reveal-late" ref={panelRef}>
-            <h3>Project enquiry</h3>
+            <h3>{t.panelTitle}</h3>
             <EnquiryForm />
           </div>
         </div>

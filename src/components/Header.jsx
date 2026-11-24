@@ -1,15 +1,18 @@
 import { NavLink, Link } from "react-router-dom";
 import Emblem from "./Emblem";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useI18n } from "../i18n/I18n";
 import { useEffect, useRef, useState } from "react";
 
 const links = [
-  ["/", "Home"],
-  ["/expertise", "Expertise"],
-  ["/about", "About"],
-  ["/contact", "Contact"],
+  ["/", "home"],
+  ["/expertise", "expertise"],
+  ["/about", "about"],
+  ["/contact", "contact"],
 ];
 
 export default function Header() {
+  const { d, lp } = useI18n();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef(null);
@@ -44,10 +47,10 @@ export default function Header() {
     >
       <div className="container header-inner">
         <Link
-          to="/"
+          to={lp("/")}
           className="brand"
           onClick={() => setOpen(false)}
-          aria-label="Holoptic home"
+          aria-label={d.nav.homeLink}
         >
           <Emblem className="brand-emblem" intro />
 
@@ -59,28 +62,30 @@ export default function Header() {
 
         <button
           className="menu-toggle"
-          aria-label="Toggle navigation"
+          aria-label={d.nav.toggle}
           aria-expanded={open}
           onClick={() => setOpen(!open)}
         >
-          {open ? "Close" : "Menu"} <span aria-hidden="true">☰</span>
+          {open ? d.nav.close : d.nav.menu} <span aria-hidden="true">☰</span>
         </button>
 
-        <nav className={open ? "nav open" : "nav"} aria-label="Main navigation">
-          {links.map(([url, name]) => (
+        <nav className={open ? "nav open" : "nav"} aria-label={d.nav.main}>
+          {links.map(([url, key]) => (
             <NavLink
               key={url}
-              to={url}
+              to={lp(url)}
               end={url === "/"}
               onClick={() => setOpen(false)}
             >
-              {name}
+              {d.nav[key]}
             </NavLink>
           ))}
 
           <a className="nav-ai" href="https://ai.holoptic.org/">
             Private AI ↗
           </a>
+
+          <LanguageSwitcher onChoose={() => setOpen(false)} />
         </nav>
       </div>
     </header>
