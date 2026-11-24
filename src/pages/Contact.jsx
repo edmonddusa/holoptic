@@ -184,6 +184,12 @@ function EnquiryForm() {
           Or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
         </p>
       </div>
+      <p className="enquiry-privacy">
+        Your details are sent through Formspree, a US-based form service, and
+        are used only to reply to your enquiry. We don't share them or add you
+        to any mailing list. To have them deleted, email{" "}
+        <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+      </p>
     </form>
   );
 }

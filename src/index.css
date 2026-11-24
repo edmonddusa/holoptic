@@ -1093,3 +1093,20 @@ a.service-card::after {
     transition: none;
   }
 }
+
+/* Contact page — privacy note under the form */
+
+.enquiry-form .enquiry-privacy {
+  margin: 4px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #e6e1d8;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #8a949c;
+}
+
+.enquiry-form .enquiry-privacy a {
+  color: #8a6a3a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
