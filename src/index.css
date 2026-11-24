@@ -459,7 +459,8 @@
     font-size: clamp(2.5rem, 9vw, 4rem);
   }
 }
-/* Expertise page — Budapest panorama */
+/* Expertise page — Parliament at blue hour.
+   Photo by Gabriel Miklos on Unsplash. */
 
 .expertise-hero {
   position: relative;
@@ -468,14 +469,23 @@
     linear-gradient(
       90deg,
       rgba(7, 17, 28, 0.94) 0%,
-      rgba(7, 17, 28, 0.76) 32%,
-      rgba(7, 17, 28, 0.28) 68%,
+      rgba(7, 17, 28, 0.78) 34%,
+      rgba(7, 17, 28, 0.3) 68%,
       rgba(7, 17, 28, 0.08) 100%
     ),
-    url("/images/budapest-expertise.webp");
+    url("/images/budapest-parliament-blue-hour-3200.webp");
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(7, 17, 28, 0.94) 0%,
+      rgba(7, 17, 28, 0.78) 34%,
+      rgba(7, 17, 28, 0.3) 68%,
+      rgba(7, 17, 28, 0.08) 100%
+    ),
+    image-set(url("/images/budapest-parliament-blue-hour-1600.webp") 1x, url("/images/budapest-parliament-blue-hour-3200.webp") 2x);
 
   background-size: cover;
-  background-position: center center;
+  background-position: center, center 58%;
   background-repeat: no-repeat;
 
   min-height: 520px;
@@ -512,7 +522,7 @@
 @media (max-width: 700px) {
   .expertise-hero {
     min-height: 460px;
-    background-position: 65% center;
+    background-position: center, 60% center;
   }
 
   .expertise-hero .container {
