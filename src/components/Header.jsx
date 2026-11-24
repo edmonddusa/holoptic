@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
-import { useState } from "react";
+import Emblem from "./Emblem";
+import { useEffect, useRef, useState } from "react";
 
 const links = [
   ["/", "Home"],
@@ -10,9 +11,37 @@ const links = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef(null);
+
+  // Turn the emblem's dial with the scroll position, and slim the header down.
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const y = window.scrollY;
+      setScrolled(y > 40);
+      headerRef.current?.style.setProperty(
+        "--spin",
+        `${(y * 0.12).toFixed(1)}deg`,
+      );
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
 
   return (
-    <header className="site-header">
+    <header
+      ref={headerRef}
+      className={`site-header${scrolled ? " is-scrolled" : ""}`}
+    >
       <div className="container header-inner">
         <Link
           to="/"
@@ -20,12 +49,7 @@ export default function Header() {
           onClick={() => setOpen(false)}
           aria-label="Holoptic home"
         >
-          <img
-            src="/images/holoptic-algiz.svg"
-            alt=""
-            className="brand-emblem"
-            aria-hidden="true"
-          />
+          <Emblem className="brand-emblem" intro />
 
           <span>
             HOLOPTIC

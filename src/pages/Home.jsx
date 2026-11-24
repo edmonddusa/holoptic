@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import EnterpriseExperience from "../components/EnterpriseExperience";
 import WaveField from "../components/WaveField";
+import EmblemParticles from "../components/EmblemParticles";
 
 const services = [
   {
@@ -164,7 +165,7 @@ export default function Home() {
           </div>
           <div className="ai-visual" aria-hidden="true">
             <span>PRIVATE</span>
-            <div className="ai-core">◇</div>
+            <EmblemParticles className="ai-emblem" />
             <span>BY DESIGN</span>
           </div>
         </div>
