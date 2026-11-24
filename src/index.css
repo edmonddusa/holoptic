@@ -411,3 +411,70 @@
     height: 48px;
   }
 }
+/* Service cards link to their section on the Expertise page. */
+.service-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+.expertise-item {
+  scroll-margin-top: 100px;
+}
+/* Service card hover: a gold rule draws across the top, the arrow steps out. */
+.service-card {
+  position: relative;
+  transition: background-color .3s;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1);
+}
+.service-number span {
+  display: inline-block;
+  transition: transform .3s, color .3s;
+}
+.service-card h3 {
+  transition: transform .3s;
+}
+@media (hover: hover) {
+  .service-card:hover { background-color: #faf8f3; }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover .service-number span { transform: translate(4px, -4px); color: #7d5c2e; }
+  .service-card:hover h3 { transform: translateX(4px); }
+}
+.service-card:focus-visible { background-color: #faf8f3; }
+.service-card:focus-visible::before { transform: scaleX(1); }
+.service-card:focus-visible .service-number span { transform: translate(4px, -4px); color: #7d5c2e; }
+/* Service card hover: a warm glow follows the cursor (position set in Home.jsx). */
+.service-card {
+  position: relative;
+  isolation: isolate;
+}
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .35s;
+  background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(201, 164, 108, .2), transparent 65%);
+}
+@media (hover: hover) {
+  .service-card:hover::after { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-card::before,
+  .service-card::after,
+  .service-card * {
+    transition-duration: .01ms !important;
+  }
+}

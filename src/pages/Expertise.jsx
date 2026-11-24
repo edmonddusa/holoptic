@@ -4,21 +4,25 @@ const groups = [
     "Cloud & Infrastructure",
     "Cloud migration and modernization, AWS architecture, Terraform, Kubernetes, Docker, delivery automation, observability, and operational resilience.",
     "AWS · Azure · GCP · Terraform · Kubernetes · GitHub Actions · GitLab CI/CD",
+    "cloud",
   ],
   [
     "Database Engineering",
     "Database design, production troubleshooting, incident resolution, monitoring, administration, configuration, and performance optimization.",
     "PostgreSQL · Cassandra · MySQL · DynamoDB · SQL",
+    "databases",
   ],
   [
     "Software Engineering",
     "Backend services, APIs, distributed systems, frontend applications, integration engineering, testing, and maintainable software architecture.",
     "Java · Kotlin · Node.js · React · TypeScript · REST APIs",
+    "software",
   ],
   [
     "Private AI Infrastructure",
     "Local AI deployments, secure Linux environments, inference infrastructure, private knowledge workflows, and system integration.",
     "On-premises AI · Linux · Private inference · Data control",
+    "private-ai",
   ],
 ];
 export default function Expertise() {
@@ -40,8 +44,8 @@ export default function Expertise() {
       </section>
       <section className="section section-light">
         <div className="container expertise-list">
-          {groups.map(([title, desc, stack], i) => (
-            <article className="expertise-item" key={title}>
+          {groups.map(([title, desc, stack, id], i) => (
+            <article className="expertise-item" id={id} key={title}>
               <span className="expertise-index">0{i + 1}</span>
               <div>
                 <h2>{title}</h2>

@@ -5,29 +5,40 @@ import WaveField from "../components/WaveField";
 const services = [
   {
     n: "01",
+    slug: "cloud",
     title: "Cloud & Infrastructure",
     desc: "Cloud architecture, migrations, infrastructure as code, container platforms, and reliable delivery pipelines.",
     tech: "AWS · Terraform · Kubernetes · CI/CD",
   },
   {
     n: "02",
+    slug: "databases",
     title: "Database Engineering",
     desc: "Performance, resilience, observability, and hands-on operational expertise for business-critical data systems.",
     tech: "PostgreSQL · Cassandra · MySQL · DynamoDB",
   },
   {
     n: "03",
+    slug: "software",
     title: "Software Engineering",
     desc: "Well-architected applications, robust backend services, modern interfaces, and maintainable integrations.",
     tech: "Java · Kotlin · Node.js · React · TypeScript",
   },
   {
     n: "04",
+    slug: "private-ai",
     title: "Private AI Systems",
     desc: "On-premises inference, privacy-conscious AI deployment, and practical integration into existing workflows.",
     tech: "Local inference · Linux · Data sovereignty",
   },
 ];
+// Feeds the cursor position to the card's CSS spotlight.
+function trackPointer(e) {
+  const r = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  e.currentTarget.style.setProperty("--my", `${e.clientY - r.top}px`);
+}
+
 export default function Home() {
   return (
     <>
@@ -84,14 +95,19 @@ export default function Home() {
           </div>
           <div className="service-grid">
             {services.map((s) => (
-              <article className="service-card" key={s.n}>
+              <Link
+                className="service-card"
+                key={s.n}
+                to={`/expertise#${s.slug}`}
+                onPointerMove={trackPointer}
+              >
                 <div className="service-number">
                   {s.n} <span>↗</span>
                 </div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
                 <div className="service-tech">{s.tech}</div>
-              </article>
+              </Link>
             ))}
           </div>
           <div className="section-link">
