@@ -112,7 +112,7 @@ The theme colors are CSS custom properties on `:root`:
 | `--cream` | `#f6f3ed` | Light sections              |
 | `--muted` | `#64717b` | Body text on light sections |
 
-Background photos are linked from the CSS with absolute paths such as `url('/images/danube-castle.webp')`.
+Background photos are linked from the CSS with absolute paths such as `url('/images/budapest-chain-bridge-night-3200.webp')`.
 
 ## Static assets
 
@@ -122,7 +122,7 @@ Anything in `public/` is served from the site root, so `public/images/foo.webp` 
 | ------------------------------------------------------------- | --------------------------------------------- |
 | `images/holoptic-algiz.svg`                                   | Favicon, header logo, JSON-LD logo            |
 | `images/holoptic-social.png` (1200×630)                       | `og:image` / `twitter:image` link previews    |
-| `images/danube-castle.webp` and other `budapest-*.webp` files | Page hero backgrounds (in `index.css`)        |
+| `images/budapest-*.webp` files                               | Page hero backgrounds (in `index.css`)        |
 | `images/holoptic-horizontal.svg`                              | Not used on the site (spare logo variant)     |
 | `images/holoptic-linkedin-profile.png`                        | Not used on the site (LinkedIn profile image) |
 
