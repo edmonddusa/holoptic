@@ -399,7 +399,8 @@
     margin-top: 50px;
   }
 }
-/* Contact page — Budapest Parliament */
+/* Contact page — Ferenciek tere at dusk.
+   Photo by Gabriel Tudor on Unsplash; license plates blurred. */
 
 .contact-hero {
   position: relative;
@@ -412,10 +413,19 @@
       rgba(7, 17, 28, 0.15) 75%,
       rgba(7, 17, 28, 0.05) 100%
     ),
-    url("/images/budapest-parliament-contact.webp");
+    url("/images/budapest-ferenciek-dusk-3200.webp");
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(7, 17, 28, 0.92) 0%,
+      rgba(7, 17, 28, 0.7) 35%,
+      rgba(7, 17, 28, 0.15) 75%,
+      rgba(7, 17, 28, 0.05) 100%
+    ),
+    image-set(url("/images/budapest-ferenciek-dusk-1600.webp") 1x, url("/images/budapest-ferenciek-dusk-3200.webp") 2x);
 
   background-size: cover;
-  background-position: center;
+  background-position: center, center 45%;
   background-repeat: no-repeat;
   min-height: 520px;
 
@@ -448,7 +458,7 @@
 @media (max-width: 700px) {
   .contact-hero {
     min-height: 460px;
-    background-position: 65% center;
+    background-position: center, 62% center;
   }
 
   .contact-hero .container {
