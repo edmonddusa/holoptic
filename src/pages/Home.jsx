@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import EnterpriseExperience from "../components/EnterpriseExperience";
+import WaveField from "../components/WaveField";
 
 const services = [
   {
@@ -63,7 +64,8 @@ export default function Home() {
           H
         </div>
       </section>
-      <section className="section section-light">
+      <section className="section section-light section-wave">
+        <WaveField className="section-wave-canvas" tone="light" />
         <div className="container">
           <div className="section-heading">
             <div>

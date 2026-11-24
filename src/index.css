@@ -12,6 +12,28 @@
   background-position: center, center, center 47%;
 }
 .hero-grid, .hero-ornament { display: none; }
+.section-wave {
+  position: relative;
+  isolation: isolate;
+}
+/* A cream halo keeps the text crisp where the dots pass behind it. */
+.section-wave .section-heading h2,
+.section-wave .section-heading > p {
+  text-shadow: 0 0 3px #f6f3ed, 0 0 8px #f6f3ed, 0 0 14px #f6f3ed;
+}
+.section-wave-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 560px;
+  display: block;
+  pointer-events: none;
+  /* Soft top and bottom edges so the wave blends into the section. */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 12%, #000 80%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 12%, #000 80%, transparent 100%);
+}
 .hero-lead { color: #e0e8eb; text-shadow: 0 1px 8px rgba(0,0,0,.25); }
 .hero-foot { color: #c9d5dc; }
 .hero::after {
