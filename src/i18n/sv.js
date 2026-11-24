@@ -112,6 +112,7 @@ export default {
         stack: [
           "Java",
           "Kotlin",
+          "Rust",
           "Node.js",
           "React",
           "TypeScript",

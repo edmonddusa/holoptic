@@ -106,7 +106,15 @@ export default {
         title: "Ingeniería de software",
         short: "Ingeniería de software",
         desc: "Servicios backend, API, sistemas distribuidos, aplicaciones frontend, ingeniería de integración, pruebas y arquitectura de software mantenible.",
-        stack: ["Java", "Kotlin", "Node.js", "React", "TypeScript", "API REST"],
+        stack: [
+          "Java",
+          "Kotlin",
+          "Rust",
+          "Node.js",
+          "React",
+          "TypeScript",
+          "API REST",
+        ],
       },
       {
         title: "Infraestructura de IA privada",
