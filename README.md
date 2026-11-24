@@ -139,13 +139,17 @@ Background photos are linked from the CSS with absolute paths such as `url('/ima
 
 Anything in `public/` is served from the site root, so `public/images/foo.webp` is available at `/images/foo.webp`. Use WebP for photos.
 
-| File                                    | Used by                                       |
-| --------------------------------------- | --------------------------------------------- |
-| `images/holoptic-algiz.svg`             | Favicon, header logo, JSON-LD logo            |
-| `images/holoptic-social.png` (1200×630) | `og:image` / `twitter:image` link previews    |
-| `images/*.webp` photos                  | Page hero backgrounds (in `index.css`)        |
-| `images/holoptic-horizontal.svg`        | Not used on the site (spare logo variant)     |
-| `images/holoptic-linkedin-profile.png`  | Not used on the site (LinkedIn profile image) |
+Each hero photo comes in two widths, `-1600` and `-3200`, picked with `image-set()` for normal and high-density screens. The photos are from Unsplash (free license, no attribution required). When you replace one, delete the old files so `public/images` holds only what the site uses.
+
+| File                                          | Used by                                                                                              |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `images/holoptic-algiz.svg`                   | Favicon, JSON-LD logo, and the shape `EmblemParticles.jsx` samples (the header logo is `Emblem.jsx`) |
+| `images/holoptic-social.png` (1200×630)       | `og:image` / `twitter:image` link previews                                                           |
+| `images/holoptic-horizontal.svg`              | Not served on any page; the source for `holoptic-social.png` (see below)                             |
+| `images/budapest-chain-bridge-night-*.webp`   | Home hero                                                                                            |
+| `images/budapest-parliament-blue-hour-*.webp` | Expertise hero                                                                                       |
+| `images/esztergom-basilica-*.webp`            | About hero                                                                                           |
+| `images/budapest-ferenciek-dusk-*.webp`       | Contact hero (license plates blurred)                                                                |
 
 ### Regenerating the social preview image
 
@@ -161,14 +165,16 @@ Link previews are cached by the platforms that show them. After deploying a new 
 
 ## SEO and analytics
 
-All `<head>` metadata is written by hand in `index.html`:
+The static `<head>` in `index.html` is written by hand:
 
-- title, description, keywords, canonical URL
+- title, description, keywords, canonical URL (English defaults)
 - Open Graph and Twitter Card tags
 - JSON-LD `Organization` data (name, logo, Budapest address)
 - the Umami analytics script (`cloud.umami.is`, website ID set in `data-website-id`)
 
-Every route uses the same `<head>`; nothing sets per-page titles. If you change the company details, update the meta tags and the JSON-LD together.
+When the app runs, `LangLayout` (`src/i18n/I18n.jsx`) replaces `<html lang>`, the title, the description and the canonical URL with the current language's values, and adds `hreflang` alternates. Titles and descriptions come from the `meta` section of each dictionary, so they differ by language, not by page. Open Graph tags are not changed, because link-preview crawlers don't run JavaScript.
+
+If you change the company details, update the meta tags, the JSON-LD and the `meta` text in the dictionaries together.
 
 ## Deployment
 
