@@ -606,3 +606,122 @@ a.service-card::after {
     transition-duration: .01ms !important;
   }
 }
+
+/* Expertise page — side index, arrival highlight, tech tags */
+
+.expertise-layout {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 60px;
+  align-items: start;
+}
+
+.expertise-index-nav {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #d5d2cb;
+}
+
+.expertise-index-nav a {
+  display: flex;
+  gap: 12px;
+  margin-left: -1px;
+  padding: 11px 0 11px 18px;
+  border-left: 2px solid transparent;
+  font-size: 13px;
+  color: var(--muted);
+  transition: color 0.25s, border-color 0.25s;
+}
+
+.expertise-index-nav a span {
+  color: #a9814d;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  padding-top: 2px;
+}
+
+.expertise-index-nav a:hover,
+.expertise-index-nav a.is-active {
+  color: #182b39;
+}
+
+.expertise-index-nav a.is-active {
+  border-left-color: var(--gold);
+}
+
+.expertise-list .expertise-item {
+  position: relative;
+  isolation: isolate;
+}
+
+.expertise-list .expertise-item:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* A gold wash that fades out when you arrive from a link like /expertise#cloud. */
+.expertise-item::before {
+  content: "";
+  position: absolute;
+  inset: 0 -28px;
+  z-index: -1;
+  border-left: 3px solid var(--gold);
+  background: rgba(201, 164, 108, 0.14);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.expertise-item.is-arrived::before {
+  animation: expertise-arrive 2.6s ease-out;
+}
+
+@keyframes expertise-arrive {
+  0%, 30% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-tags li {
+  padding: 6px 12px;
+  border: 1px solid rgba(169, 129, 77, 0.35);
+  background: #fbf9f5;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: #8a6a3a;
+}
+
+.cta-inner p:not(.kicker) {
+  margin: 10px 0 0;
+  color: #c0d0d8;
+}
+
+@media (max-width: 850px) {
+  .expertise-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .expertise-index-nav {
+    display: none;
+  }
+
+  .expertise-item::before {
+    inset: 0 -16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expertise-item.is-arrived::before {
+    animation-duration: 0.01ms;
+  }
+}
