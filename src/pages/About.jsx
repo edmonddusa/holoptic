@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import WaveField from "../components/WaveField";
 
 const principles = [
   {
@@ -19,6 +20,18 @@ const principles = [
     description:
       "Maintainable systems are built through deliberate decisions. We value clarity, simplicity, and the ability to evolve without unnecessary complexity.",
   },
+];
+
+const facts = [
+  { value: "25+", label: "Years of hands-on engineering experience" },
+  { value: "3", label: "Enterprise sectors: software, automotive, finance" },
+  { value: "Budapest", label: "Based in Hungary, serving international clients" },
+];
+
+const companies = [
+  { name: "SAP", sector: "Enterprise software" },
+  { name: "Jaguar Land Rover", sector: "Automotive" },
+  { name: "Nasdaq", sector: "Financial markets" },
 ];
 
 export default function About() {
@@ -77,9 +90,18 @@ export default function About() {
             </p>
           </div>
         </div>
+        <div className="container about-facts">
+          {facts.map((fact) => (
+            <div className="about-fact" key={fact.value}>
+              <strong>{fact.value}</strong>
+              <span>{fact.label}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="section section-dark about-principles">
+        <WaveField className="about-principles-wave" tone="dark" />
         <div className="container">
           <div className="section-heading">
             <div>
@@ -122,8 +144,8 @@ export default function About() {
           <div>
             <p>
               Our professional engineering background includes engagements
-              involving internationally recognized organizations such as SAP,
-              Jaguar Land Rover, and Nasdaq.
+              involving internationally recognized organizations in enterprise
+              software, automotive engineering, and financial markets.
             </p>
 
             <p>
@@ -139,6 +161,20 @@ export default function About() {
               every new engagement.
             </p>
           </div>
+        </div>
+        <div className="container">
+          <div className="about-companies">
+            {companies.map((company) => (
+              <div className="about-company" key={company.name}>
+                <strong>{company.name}</strong>
+                <span>{company.sector}</span>
+              </div>
+            ))}
+          </div>
+          <p className="about-companies-note">
+            Selected organizations from previous professional engineering
+            engagements.
+          </p>
         </div>
       </section>
 

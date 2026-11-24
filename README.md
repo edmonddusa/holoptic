@@ -122,7 +122,7 @@ Anything in `public/` is served from the site root, so `public/images/foo.webp` 
 | ------------------------------------------------------------- | --------------------------------------------- |
 | `images/holoptic-algiz.svg`                                   | Favicon, header logo, JSON-LD logo            |
 | `images/holoptic-social.png` (1200×630)                       | `og:image` / `twitter:image` link previews    |
-| `images/budapest-*.webp` files                               | Page hero backgrounds (in `index.css`)        |
+| `images/*.webp` photos                                       | Page hero backgrounds (in `index.css`)        |
 | `images/holoptic-horizontal.svg`                              | Not used on the site (spare logo variant)     |
 | `images/holoptic-linkedin-profile.png`                        | Not used on the site (LinkedIn profile image) |
 
